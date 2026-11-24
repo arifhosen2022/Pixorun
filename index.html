@@ -32,10 +32,10 @@ h1,h2,h3{font-family:'Press Start 2P',monospace;letter-spacing:-.04em}h1{positio
 .pass-panel{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:45px;padding:32px;border:1px solid #a34cff66;background:radial-gradient(circle at 20% 50%,#8e2cff22,transparent 55%),linear-gradient(135deg,#171020,#09090f 70%);box-shadow:8px 8px 0 #28103e}
 .pass-visual{min-height:300px;display:grid;place-items:center;position:relative}.pass-visual img{width:min(300px,90%);max-height:300px;object-fit:contain;filter:drop-shadow(0 0 32px #a52cff66);animation:float 6s ease-in-out infinite}
 .pass-copy h2{font-size:clamp(17px,2.6vw,25px);line-height:1.7;margin:13px 0}.pass-copy p{font-size:24px;color:var(--muted);max-width:480px}
-.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.phase{padding:17px 13px;min-height:145px;background:#100b1c;border:1px solid #66359a;box-shadow:4px 4px 0 #28103e}.phase small{font:8px 'Press Start 2P',monospace;color:#bd62ff;line-height:1.8}.phase h3{font-size:9px;line-height:1.8;margin:15px 0 9px}.phase p{font-size:20px;color:var(--muted);margin:0}
-.footer{padding:28px 0 38px;border-top:1px solid #8d45c955;text-align:center;color:#9f8caf;font-size:19px}
-@media(max-width:850px){.cards{grid-template-columns:1fr}.card{min-height:unset}.pass-panel{grid-template-columns:1fr;gap:10px}.pass-visual{min-height:230px}.journey{grid-template-columns:repeat(2,1fr)}.phase:last-child{grid-column:1/-1}}
-@media(max-width:600px){.nav{height:72px}.logo img{width:125px}.hero{min-height:610px;padding:35px 0 55px}.hero-art{height:230px}.hero-art img{width:205px;height:205px}.hero-art:before{height:125px}.hero-art:after{height:140px}.hero-copy{font-size:22px}.eyebrow,.status{font-size:8px}.section{padding:54px 0}.pass-panel{padding:18px}.journey{grid-template-columns:1fr}.phase:last-child{grid-column:auto}.btn{font-size:8px;padding:12px 13px}}
+.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.phase{padding:17px 13px;min-height:145px;background:#100b1c;border:1px solid #66359a;box-shadow:4px 4px 0 #28103e}.phase small{font:8px 'Press Start 2P',monospace;color:#bd62ff;line-height:1.8}.phase h3{font-size:9px;line-height:1.8;margin:15px 0 9px}.phase p{font-size:20px;color:var(--muted);margin:0}
+.roadmap-action{text-align:center;margin-top:28px}.footer{padding:28px 0 38px;border-top:1px solid #8d45c955;text-align:center;color:#9f8caf;font-size:19px}
+@media(max-width:850px){.cards{grid-template-columns:1fr}.card{min-height:unset}.pass-panel{grid-template-columns:1fr;gap:10px}.pass-visual{min-height:230px}.journey{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.nav{height:72px}.logo img{width:125px}.hero{min-height:610px;padding:35px 0 55px}.hero-art{height:230px}.hero-art img{width:205px;height:205px}.hero-art:before{height:125px}.hero-art:after{height:140px}.hero-copy{font-size:22px}.eyebrow,.status{font-size:8px}.section{padding:54px 0}.pass-panel{padding:18px}.journey{grid-template-columns:1fr}.btn{font-size:8px;padding:12px 13px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -53,7 +53,7 @@ h1,h2,h3{font-family:'Press Start 2P',monospace;letter-spacing:-.04em}h1{positio
 <h1>PIXORUN<br><span>BUILD THE NEXT</span></h1>
 <p class="hero-copy">A community-driven token launchpad ecosystem, built step by step on Robinhood Chain.</p>
 <div class="status">PRIVATE BETA <span>•</span> GENESIS PASS HOLDERS ONLY</div>
-<div class="actions"><a class="btn" href="/Pixorun/genesis/">EXPLORE GENESIS PASS</a><a class="btn secondary" href="/Pixorun/about/">DISCOVER PIXORUN</a></div>
+<div class="actions"><a class="btn" href="/Pixorun/gtd/">TRY FOR GTD</a></div>
 </section>
 <section class="section"><div class="wrap"><div class="section-head"><div class="kicker">THE ECOSYSTEM</div><h2>ONE VISION. THREE CORE PILLARS.</h2><p>A focused foundation for launching, testing and growing onchain projects.</p></div>
 <div class="cards">
@@ -70,9 +70,7 @@ h1,h2,h3{font-family:'Press Start 2P',monospace;letter-spacing:-.04em}h1{positio
 <article class="phase"><small>01 / ACCESS</small><h3>GENESIS PASS</h3><p>Private access pass.</p></article>
 <article class="phase"><small>02 / PRIVATE</small><h3>PRIVATE TESTNET</h3><p>Genesis Pass holders.</p></article>
 <article class="phase"><small>03 / PUBLIC</small><h3>PUBLIC TESTNET</h3><p>Community testing.</p></article>
-<article class="phase"><small>04 / BUILD</small><h3>ECOSYSTEM BUILD</h3><p>Core product development.</p></article>
-<article class="phase"><small>05 / LAUNCH</small><h3>MAINNET</h3><p>Production launch.</p></article>
-</div></div></section>
+</div><div class="roadmap-action"><a class="btn secondary" href="/Pixorun/roadmap/">FULL ROADMAP</a></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">PIXORUN · BUILD THE NEXT · ROBINHOOD CHAIN</div></footer>
 <script>
