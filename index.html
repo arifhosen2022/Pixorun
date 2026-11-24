@@ -47,7 +47,7 @@ h1 span{display:block;color:#c58aff}
 .orbit{position:absolute;width:min(440px,86vw);height:min(190px,38vw);border:1px solid #c28aff66;border-radius:50%;transform:rotateX(68deg) rotateZ(-22deg);box-shadow:0 0 34px #a34cff2b,inset 0 0 24px #a34cff18;animation:orbit 19s linear infinite;z-index:-1}
 .orbit.two{width:min(500px,94vw);height:min(220px,42vw);transform:rotateX(68deg) rotateZ(42deg);border-color:#e18bff55;animation-duration:26s}
 .orbit.three{width:min(365px,72vw);height:min(155px,30vw);transform:rotateX(68deg) rotateZ(88deg);border-color:#8e54ff55;animation-duration:32s}
-.hero-art img{position:relative;width:min(390px,82%);max-height:430px;object-fit:contain;filter:drop-shadow(0 18px 45px #0009) drop-shadow(0 0 34px #a64dff66);animation:passFloat 6s ease-in-out infinite;transform-style:preserve-3d}
+.hero-art .genesis-video{position:relative;display:block;width:min(520px,92%);max-height:460px;aspect-ratio:16/9;object-fit:contain;border-radius:18px;filter:drop-shadow(0 18px 45px #0009) drop-shadow(0 0 34px #a64dff66);animation:passFloat 6s ease-in-out infinite;transform-style:preserve-3d;background:#100b19}
 @keyframes passFloat{0%,100%{transform:translateY(0) rotateY(-5deg) rotateZ(-1deg)}50%{transform:translateY(-16px) rotateY(5deg) rotateZ(1deg)}}
 @keyframes orbit{to{transform:rotateX(68deg) rotateZ(338deg)}}
 @keyframes pulse{0%,100%{opacity:.65;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
@@ -95,7 +95,7 @@ h1 span{display:block;color:#c58aff}
 </div>
 <div class="hero-art" aria-label="PIXORUN Genesis Pass artwork">
 <div class="art-glow"></div><div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div>
-<img src="assets/927.png" alt="PIXORUN Genesis Pass">
+<video class="genesis-video" autoplay muted loop playsinline preload="metadata" poster="assets/927.png" aria-label="PIXORUN Genesis Pass cinematic video"><source src="assets/928.mp4" type="video/mp4"></video>
 </div>
 <p class="mint-soon">THE FIRST PIXORUN GENESIS NFT MINT — COMING SOON</p>
 <a class="cta" href="/Pixorun/gtd/">TRY TO GRAB GTD <span>↗</span></a>
