@@ -2,6 +2,52 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07050d"><title>GTD Campaign | PIXORUN</title><link rel="stylesheet" href="../styles.css"><style>
 .menu-wrap{position:relative!important;margin-left:auto!important;z-index:1002!important}.nav{position:relative!important;z-index:1001!important;overflow:visible!important}.menu-toggle{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;display:grid!important;place-items:center!important;border:2px solid #c16aff!important;background:#160d25!important;color:#fff!important;box-shadow:4px 4px 0 #4e1b79!important;cursor:pointer!important;position:relative!important;z-index:1003!important}.menu-toggle .dots{font:32px monospace!important;color:#fff!important}.menu-pop{position:absolute!important;right:0!important;top:calc(100% + 12px)!important;width:225px!important;padding:9px!important;display:none!important;z-index:1005!important;background:#10091b!important;border:2px solid #c16aff!important;box-shadow:6px 6px 0 #4e1b79!important}.menu-pop.open{display:block!important;visibility:visible!important}.menu-pop a,.menu-pop a:visited{display:flex!important;justify-content:space-between!important;padding:14px!important;min-height:48px!important;color:#fff!important;background:#170e26!important;border-bottom:1px solid #5d3183!important;font:21px 'VT323',monospace!important}.menu-pop a.active,.menu-pop a:hover{background:#6f2ca5!important;color:#fff!important}
 .task-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.task{border:1px solid #563575;background:#130c1e;padding:18px}.task b{display:block;margin-bottom:8px;color:#e5c8ff}.task p{min-height:42px}.task button,.x-link{display:inline-flex;align-items:center;justify-content:center;margin-top:8px;padding:10px 14px;background:#6f2ca5;border:1px solid #c16aff;color:#fff;text-decoration:none;font:20px 'VT323',monospace;cursor:pointer}.task button:disabled{opacity:.65;cursor:default}.task .state{display:block;margin-top:9px;color:#c9a5ed;font:18px 'VT323',monospace}.submission-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.submission-grid label{display:block;color:#e5c8ff;font-family:'VT323',monospace;font-size:22px}.submission-grid input{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:13px;background:#090610;border:1px solid #75459b;color:#fff;font:18px 'VT323',monospace}.muted{opacity:.75}.progress-track{height:9px;background:#21152e;border:1px solid #583776;margin-top:14px;overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#8e43d4,#e1aaff);transition:width .35s}.notice{border-left:3px solid #c16aff;padding:12px 14px;background:#160e21}.profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.profile-item{min-width:0;padding:14px;background:#0c0713;border:1px solid #563575}.profile-item small{display:block;color:#b994d8;font:16px 'VT323',monospace;margin-bottom:7px}.profile-item strong,.profile-item a{display:block;color:#f0dcff;overflow-wrap:anywhere;font:19px 'VT323',monospace}.profile-points{font-size:26px!important;color:#d9a5ff!important}@media(max-width:650px){.profile-grid{grid-template-columns:1fr}}.modal-backdrop{position:fixed;inset:0;background:#05020bdc;display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}.modal-backdrop.show{display:flex;animation:fadeIn .25s ease}.modal{width:min(420px,100%);background:#130b20;border:2px solid #c16aff;box-shadow:0 0 35px #9d4bda55;padding:28px;text-align:center;animation:popIn .35s cubic-bezier(.2,.8,.2,1)}.spinner{width:48px;height:48px;border:4px solid #4b2b65;border-top-color:#e0b2ff;border-radius:50%;margin:0 auto 18px;animation:spin .8s linear infinite}.modal h2{color:#e5c8ff}.modal p{color:#eee}.modal button{margin-top:14px;padding:10px 20px;background:#6f2ca5;border:1px solid #c16aff;color:#fff;font:21px 'VT323',monospace;cursor:pointer}.modal-icon{font-size:42px;color:#d7a3ff}@keyframes spin{to{transform:rotate(360deg)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes popIn{from{transform:scale(.88) translateY(12px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}@media(max-width:650px){.task-list,.submission-grid{grid-template-columns:1fr}.menu-pop{right:0!important;width:min(250px,82vw)!important}}
+
+/* Compact premium GTD refinements */
+.content{max-width:920px;margin:0 auto}
+.hero{padding-top:38px;padding-bottom:22px}
+.hero p{max-width:560px}
+.card{border:1px solid #39234f;background:linear-gradient(145deg,#151020 0%,#0d0915 100%);box-shadow:0 12px 32px #0005}
+.task-list{gap:10px}
+.task{padding:15px;border-radius:10px;background:linear-gradient(145deg,#171023,#100b18);border-color:#3c2851}
+.task p{min-height:0;margin:6px 0 10px;font-size:14px;line-height:1.45;color:#bbaacb}
+.task b{font-size:17px;letter-spacing:.2px}
+.task button,.x-link,.btn{border-radius:7px;box-shadow:0 4px 14px #8b42c433}
+.submission-grid{gap:11px}
+.submission-grid label{font-size:18px}
+.submission-grid input{border-radius:7px;font-family:inherit;font-size:15px;padding:12px}
+.progress-track{border-radius:99px;height:7px}
+.campaign-note{margin-top:12px;border:1px solid #38264b;border-left:3px solid #a56bd1;border-radius:8px;background:#120d1a;padding:11px 14px;font-size:13px}
+.campaign-note span{display:block;margin-top:3px;color:#bcaaca}
+.restore-panel{margin-top:12px;border:1px solid #39284b;border-radius:10px;background:#100c17;overflow:hidden}
+.restore-panel details>summary,.key-details>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;color:#f2e6ff}
+.restore-panel summary::-webkit-details-marker,.key-details summary::-webkit-details-marker{display:none}
+.restore-panel summary b{display:block;font:17px inherit;color:#f1e2ff}
+.restore-panel summary small{display:block;margin-top:2px;color:#a994b8;font-size:12px}
+.restore-panel summary i{font-style:normal;color:#c994f1;font-size:20px}
+.restore-form{display:grid;grid-template-columns:1fr auto;gap:8px;padding:0 14px 14px;align-items:end}
+.restore-form label,.referral-share label{grid-column:1/-1;color:#bfa2d5;font-size:11px;letter-spacing:1.2px}
+.restore-form input,.referral-share input{min-width:0;width:100%;box-sizing:border-box;padding:11px 12px;border-radius:7px;background:#090610;color:#fff;border:1px solid #49345c;font:13px monospace}
+.restore-form .btn{margin:0;white-space:nowrap;padding:10px 14px}
+.profile-card{padding:clamp(16px,3vw,26px)}
+.profile-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.profile-heading h2{margin:3px 0 0}
+.profile-live{font-size:10px;letter-spacing:1px;color:#c8a1e8;border:1px solid #513967;border-radius:99px;padding:6px 9px}
+.profile-grid{gap:9px;margin-top:15px}
+.profile-item{padding:12px;border-radius:8px;background:#0b0811;border-color:#30213f}
+.profile-item small{font:10px inherit;letter-spacing:1px;color:#a88cbd;margin-bottom:6px}
+.profile-item strong,.profile-item a{font:14px inherit;line-height:1.4}
+.profile-points{font-size:24px!important;color:#d9a5ff!important}
+.profile-actions{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;margin-top:12px}
+.referral-share,.key-details{min-width:0;padding:12px;border:1px solid #352543;border-radius:8px;background:#0d0914}
+.referral-share input{margin:7px 0;font-size:12px}
+.referral-share .x-link,.key-details .x-link{margin-top:4px;padding:8px 12px;font-size:16px}
+.key-details>summary{padding:0;font-size:13px}
+.key-details>summary span{color:#bd92df;font-size:11px}
+.key-details>strong{display:block;margin-top:10px;overflow-wrap:anywhere;color:#e6d1f7;font:11px monospace}
+.key-details>small{display:block;margin-top:7px;color:#a995b8;font-size:11px}
+@media(max-width:650px){.task-list,.submission-grid{grid-template-columns:1fr}.task{padding:13px}.profile-grid{grid-template-columns:1fr 1fr}.profile-actions{grid-template-columns:1fr}.restore-form{grid-template-columns:1fr}.restore-form .btn{width:100%}.hero{padding-top:26px}}
+
 </style></head><body>
 <header class="wrap nav"><a class="logo" href="../"><img src="../assets/924(1).png" alt="PIXORUN"></a><div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button><nav class="menu-pop" id="site-menu" aria-label="Site pages"><a href="/Pixorun/">Home<span>↗</span></a><a href="/Pixorun/about/">About<span>↗</span></a><a href="/Pixorun/gtd/" class="active">GTD<span>↗</span></a><a href="/Pixorun/launchpad/">Launchpad<span>↗</span></a><a href="/Pixorun/genesis/">Genesis Pass<span>↗</span></a><a href="/Pixorun/roadmap/">Roadmap<span>↗</span></a><a href="/Pixorun/documents/">Documents<span>↗</span></a></nav></div></header>
 <main class="wrap"><section class="hero"><span class="eyebrow">PIXORUN COMMUNITY</span><h1>GTD CAMPAIGN</h1><p>Complete the social tasks, then submit your X username, post link and EVM wallet.</p></section><section class="content">
@@ -13,24 +59,24 @@
 <div class="task" data-task="post"><b>04 · Post about PIXORUN <span class="muted">+0.5 PTS</span></b><p>Publish a short original post mentioning @pixorun.</p><button type="button" class="task-action">CREATE X POST ↗</button><span class="state">Not completed</span></div>
 </div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><p class="muted" id="progressText">0 of 4 tasks marked complete</p><p class="muted">After returning from X, a 10-second waiting check will appear. This is a self-reported task step, not an automatic confirmation from X.</p></div>
 <div class="card" id="submissionCard" style="margin-top:22px"><h2>Submit Your Details</h2><form id="gtdForm"><div class="submission-grid"><label>X Username<input id="xUsername" type="text" maxlength="16" placeholder="@username" autocomplete="off" required></label><label>EVM Wallet Address<input id="evmAddress" type="text" maxlength="42" placeholder="0x..." autocomplete="off" required></label><label style="grid-column:1/-1">Your PIXORUN Post Link<input id="postLink" type="url" placeholder="https://x.com/username/status/..." required></label><label style="grid-column:1/-1">Referral Code (Optional)<input id="referralCode" type="text" maxlength="12" placeholder="Enter referral code if you were invited"></label></div><p class="muted">Complete all four tasks to earn 1.3 points. A valid referral adds 0.5 points to you and 1 point to the inviter. Referral points are awarded only after your completed GTD submission—not on link clicks.</p><div id="referralResult" class="notice" style="display:none;margin:14px 0"></div><p class="muted">One X username, post link and wallet address can each be submitted only once.</p><button class="btn" id="submitBtn" type="submit">SUBMIT GTD DETAILS</button></form></div>
-<div class="card" id="restoreCard" style="margin-top:22px">
-<h2>RESTORE YOUR PROFILE</h2><p class="muted">Already submitted? Enter your private Recovery Key to restore your profile on this device.</p>
-<form id="restoreForm"><label style="display:block;color:#e5c8ff;font-family:'VT323',monospace;font-size:22px">Recovery Key<input id="restoreKey" type="text" maxlength="64" placeholder="Paste your 64-character key" autocomplete="off" style="display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:13px;background:#090610;border:1px solid #75459b;color:#fff;font:16px monospace" required></label><button class="btn" id="restoreBtn" type="submit" style="margin-top:12px">RESTORE PROFILE</button></form>
-</div>
-<div class="card" id="gtdNotice" style="margin-top:22px"><h2>Important GTD Notice</h2><p><strong>Completing these tasks and submitting your details does not guarantee GTD eligibility or token allocation.</strong></p><p>All submissions are subject to verification and final eligibility criteria. PIXORUN may reject or disqualify submissions that do not meet campaign requirements.</p></div>
-<div class="card" style="margin-top:22px"><h2>Stay Connected</h2><p>Follow the official PIXORUN X account for announcements and campaign updates.</p><a class="x-link" href="https://x.com/pixorun" target="_blank" rel="noopener">https://x.com/pixorun ↗</a></div>
-<div class="card" id="profileCard" style="display:none;margin-top:22px">
-<h2>PIXORUN PROFILE</h2><p class="muted">Your GTD submission profile</p>
+<div class="restore-panel" id="restoreCard">
+<details><summary><span><b>Already joined?</b><small>Restore your saved PIXORUN profile</small></span><i>＋</i></summary>
+<form id="restoreForm" class="restore-form"><label for="restoreKey">PRIVATE RECOVERY KEY</label><input id="restoreKey" type="text" maxlength="64" placeholder="Paste your 64-character key" autocomplete="off" required><button class="btn" id="restoreBtn" type="submit">RESTORE PROFILE</button></form>
+</details></div>
+<div class="notice campaign-note" id="gtdNotice"><strong>GTD participation does not guarantee eligibility or token allocation.</strong><span>Final eligibility is subject to PIXORUN campaign criteria.</span></div>
+
+<div class="card profile-card" id="profileCard" style="display:none;margin-top:16px">
+<div class="profile-heading"><div><span class="eyebrow">GTD MEMBER</span><h2>YOUR PROFILE</h2></div><span class="profile-live">● SAVED</span></div>
 <div class="profile-grid">
 <div class="profile-item"><small>X USERNAME</small><strong id="profileUsername"></strong></div>
 <div class="profile-item"><small>WALLET ADDRESS</small><strong id="profileWallet"></strong></div>
 <div class="profile-item"><small>SUBMITTED X POST</small><a id="profilePost" target="_blank" rel="noopener">View submitted post ↗</a></div>
 <div class="profile-item"><small>TOTAL POINTS</small><strong class="profile-points" id="profilePoints"></strong></div>
 <div class="profile-item"><small>REFERRAL BONUS</small><strong id="profileReferralPoints"></strong></div>
-<div class="profile-item"><small>YOUR REFERRAL CODE</small><strong id="profileReferralCode"></strong></div><div class="profile-item"><small>PRIVATE RECOVERY KEY</small><strong id="profileRecoveryKey" style="font-size:13px"></strong><button type="button" class="x-link" id="copyRecoveryKey">COPY RECOVERY KEY</button></div>
+<div class="profile-item"><small>YOUR REFERRAL CODE</small><strong id="profileReferralCode"></strong></div>
 </div>
-<div class="notice" style="margin-top:18px"><strong>Save this Recovery Key</strong><p>Keep it private and save it somewhere safe. Anyone with this key can restore your profile. PIXORUN stores only its encrypted hash.</p><strong>Your referral link</strong><input id="profileReferralLink" readonly style="display:block;width:100%;box-sizing:border-box;margin:10px 0;padding:12px;background:#090610;color:#fff;border:1px solid #75459b;font:15px monospace"><button type="button" class="x-link" id="copyProfileReferral">COPY REFERRAL LINK</button></div>
-<p class="muted" style="margin-top:16px">Your profile can be restored on any device with your private Recovery Key. Never share this key.</p>
+<div class="profile-actions"><div class="referral-share"><label for="profileReferralLink">YOUR REFERRAL LINK</label><input id="profileReferralLink" readonly><button type="button" class="x-link" id="copyProfileReferral">COPY LINK</button></div>
+<details class="key-details"><summary>Recovery key <span>View / copy</span></summary><strong id="profileRecoveryKey"></strong><button type="button" class="x-link" id="copyRecoveryKey">COPY KEY</button><small>Keep this key private. It restores your profile on another device.</small></details></div>
 </div>
 </section></main>
 <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div id="modalVisual"><div class="spinner"></div></div><h2 id="modalTitle">Submitting...</h2><p id="modalMessage">Please wait while we securely save your GTD details.</p><button id="modalClose" type="button" style="display:none">CLOSE</button></div></div>
