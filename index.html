@@ -37,6 +37,73 @@ h1,h2,h3{font-family:'Press Start 2P',monospace;letter-spacing:-.04em}h1{positio
 @media(max-width:850px){.cards{grid-template-columns:1fr}.card{min-height:unset}.pass-panel{grid-template-columns:1fr;gap:10px}.pass-visual{min-height:230px}.journey{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.footer{font-size:9px;padding:17px 0 20px}.footer-social{font-size:7px;padding:9px 10px}.footer .wrap{gap:10px}.nav{height:72px}.logo img{width:125px}.hero{min-height:610px;padding:35px 0 55px}.hero-art{height:230px}.hero-art img{width:205px;height:205px}.hero-art:before{height:125px}.hero-art:after{height:140px}.hero-copy{font-size:22px}.eyebrow,.status{font-size:8px}.section{padding:54px 0}.pass-panel{padding:18px}.journey{grid-template-columns:1fr}.btn{font-size:8px;padding:12px 13px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#111116;--panel:#19191f;--text:#f3f1f7;--muted:#a6a3b2;--purple:#815bff;--line:#34313e;--lime:#d4ff55}
+body{background:#111116;color:#f3f1f7;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;background-image:radial-gradient(ellipse at 72% 10%,#815bff20,transparent 38%),linear-gradient(180deg,#111116,#111116)}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.055em}
+.nav{height:82px;border-bottom:1px solid #ffffff13}
+.logo img{width:145px;filter:drop-shadow(0 0 12px #815bff22)}
+.menu-toggle{border:1px solid #ffffff25;background:#1b1a22;color:#f3f1f7;box-shadow:none;border-radius:12px}
+.menu-pop{background:#19191f;border:1px solid #ffffff20;box-shadow:0 18px 55px #0009;border-radius:14px;overflow:hidden}
+.menu-pop a{font:500 14px 'DM Sans',sans-serif;background:transparent;border-bottom:1px solid #ffffff0d}
+.menu-pop a:hover,.menu-pop a.active{background:#815bff24;color:#d4ff55}
+.hero{min-height:670px;display:grid;grid-template-columns:1.02fr .98fr;grid-template-rows:auto auto auto auto;align-content:center;justify-items:start;text-align:left;gap:0;padding:78px 0 88px}
+.hero:before{inset:5% -12% 0 25%;background:radial-gradient(ellipse at 55% 45%,#815bff25,transparent 58%)}
+.hero-art{grid-column:2;grid-row:1/5;width:100%;height:460px;perspective:1000px}
+.hero-art:before,.hero-art:after{width:370px;height:370px;max-width:80vw;border:1px solid #815bff75;border-radius:50%;transform:rotateX(70deg) rotateZ(-25deg);box-shadow:0 0 55px #815bff24,inset 0 0 35px #815bff14;animation:orbit3d 18s linear infinite}
+.hero-art:after{width:300px;height:420px;border-color:#d4ff5570;transform:rotateY(68deg) rotateZ(28deg);animation:orbit3dB 24s linear infinite}
+.hero-art img{width:230px;height:230px;filter:drop-shadow(0 0 34px #815bff80);animation:coreFloat 6s ease-in-out infinite}
+@keyframes orbit3d{to{transform:rotateX(70deg) rotateZ(335deg)}}@keyframes orbit3dB{to{transform:rotateY(68deg) rotateZ(388deg)}}@keyframes coreFloat{0%,100%{transform:translateY(0) rotateY(-8deg)}50%{transform:translateY(-15px) rotateY(8deg)}}
+.eyebrow{grid-column:1;grid-row:1;border:0;background:transparent;padding:0;color:#d4ff55;font:700 11px 'Space Grotesk',sans-serif;letter-spacing:.16em;margin:0 0 20px}
+h1{grid-column:1;grid-row:2;font-size:clamp(42px,6.5vw,76px);line-height:1.02;margin:0 0 22px;text-shadow:none;font-weight:700}
+h1 span{color:#d4ff55}
+.hero-copy{grid-column:1;grid-row:3;margin:0;max-width:520px;color:#b5b2c0;font:400 clamp(16px,1.8vw,19px)/1.65 'DM Sans',sans-serif}
+.status{grid-column:1;grid-row:4;margin-top:23px;border:1px solid #d4ff5540;background:#d4ff550d;color:#d4ff55;border-radius:999px;padding:8px 13px;font:600 10px 'DM Sans',sans-serif;letter-spacing:.08em}
+.status span{color:#d4ff55}
+.actions{grid-column:1;grid-row:5;justify-content:flex-start;margin-top:24px}
+.btn{border:1px solid #d4ff55;background:#d4ff55;color:#111116;box-shadow:none;border-radius:9px;min-height:48px;padding:13px 20px;font:700 12px 'DM Sans',sans-serif;letter-spacing:.02em}
+.btn.secondary{background:transparent;color:#f3f1f7;border-color:#ffffff30}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px #d4ff5520}
+.section{border-top:1px solid #ffffff12;padding:82px 0}
+.kicker{color:#d4ff55;font:700 10px 'Space Grotesk',sans-serif;letter-spacing:.15em}
+.section h2{font-size:clamp(24px,3.3vw,36px);line-height:1.2;letter-spacing:-.045em;margin:14px 0}
+.section-head p{font:400 16px/1.7 'DM Sans',sans-serif;color:#a6a3b2}
+.cards{gap:18px}
+.card{min-height:210px;padding:26px;background:linear-gradient(145deg,#1c1b24,#17171d);border:1px solid #ffffff16;box-shadow:none;border-radius:16px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:#815bff88}
+.card .number{font:600 10px 'Space Grotesk',sans-serif;color:#d4ff55;letter-spacing:.1em}
+.card h3{font-size:17px;line-height:1.3;margin:26px 0 12px}
+.card p{font:400 14px/1.7 'DM Sans',sans-serif;color:#a6a3b2}
+.pass-panel{border:1px solid #ffffff16;background:radial-gradient(circle at 20% 50%,#815bff20,transparent 55%),#19191f;box-shadow:none;border-radius:20px;padding:38px}
+.pass-visual img{filter:drop-shadow(0 0 34px #815bff66)}
+.pass-copy h2{font-size:clamp(27px,3.2vw,38px);line-height:1.12}
+.pass-copy p{font:400 15px/1.7 'DM Sans',sans-serif;color:#a6a3b2}
+.journey{gap:14px}
+.phase{padding:20px;background:#19191f;border:1px solid #ffffff16;box-shadow:none;border-radius:14px}
+.phase small{font:600 9px 'Space Grotesk',sans-serif;color:#d4ff55;letter-spacing:.1em}
+.phase h3{font-size:13px;line-height:1.4;margin:17px 0 9px}
+.phase p{font:400 13px/1.6 'DM Sans',sans-serif;color:#a6a3b2}
+.footer{border-top:1px solid #ffffff15;color:#888594;font:400 11px 'DM Sans',sans-serif}
+.footer-social{font:600 10px 'DM Sans',sans-serif;color:#d4ff55;border:1px solid #d4ff5544;background:#d4ff550b;box-shadow:none;border-radius:8px}
+.launch-preview{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.launch-copy{padding:30px 0}
+.launch-copy h2{font-size:clamp(25px,3.5vw,38px);line-height:1.16;margin:15px 0}
+.launch-copy p{color:#a6a3b2;font:400 15px/1.75 'DM Sans',sans-serif;max-width:470px}
+.preview-shell{padding:22px;background:linear-gradient(145deg,#201d2b,#17171d);border:1px solid #815bff55;border-radius:18px;box-shadow:0 20px 65px #0005}
+.preview-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:17px;border-bottom:1px solid #ffffff14;color:#f3f1f7;font:600 12px 'Space Grotesk',sans-serif}
+.preview-tag{font:600 9px 'DM Sans',sans-serif;color:#d4ff55;background:#d4ff5512;border:1px solid #d4ff5533;padding:6px 9px;border-radius:99px}
+.preview-token{display:flex;align-items:center;gap:13px;padding:22px 0}
+.token-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#815bff,#49318e);font:700 18px 'Space Grotesk',sans-serif;color:white}
+.token-name{font:600 15px 'Space Grotesk',sans-serif}
+.token-sub{font:400 11px 'DM Sans',sans-serif;color:#9995a6;margin-top:4px}
+.preview-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.metric{padding:13px;background:#111116;border:1px solid #ffffff10;border-radius:10px}
+.metric small{display:block;color:#898596;font:500 10px 'DM Sans',sans-serif;margin-bottom:7px}
+.metric strong{font:600 13px 'Space Grotesk',sans-serif;color:#f3f1f7}
+.preview-note{font:400 10px/1.6 'DM Sans',sans-serif;color:#8f8b9c;margin:16px 0 0}
+@media(max-width:760px){.hero{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:unset;padding:60px 0 65px}.hero-art{order:4;align-self:center;height:280px;margin-top:22px}.hero-art img{width:185px;height:185px}.hero-art:before{width:260px;height:260px}.hero-art:after{width:220px;height:280px}.eyebrow{order:0}.hero h1{order:1;font-size:clamp(39px,12vw,58px)}.hero-copy{order:2}.status{order:3}.actions{order:3}.launch-preview{grid-template-columns:1fr}.launch-copy{padding:0}.section{padding:60px 0}.pass-panel{padding:22px}}
+@media(prefers-reduced-motion:reduce){.hero-art:before,.hero-art:after,.hero-art img{animation:none!important}}
 </style>
 </head>
 <body>
@@ -46,14 +113,17 @@ h1,h2,h3{font-family:'Press Start 2P',monospace;letter-spacing:-.04em}h1{positio
 <nav class="menu-pop" id="site-menu" aria-label="Site pages"><a href="/Pixorun/" class="active">Home<span>↗</span></a><a href="/Pixorun/gtd/">GTD<span>↗</span></a><a href="/Pixorun/launchpad/">Launchpad<span>↗</span></a><a href="/Pixorun/genesis/">Genesis Pass<span>↗</span></a><a href="/Pixorun/roadmap/">Roadmap<span>↗</span></a><a href="/Pixorun/documents/">Documents<span>↗</span></a><a href="/Pixorun/about/">About<span>↗</span></a></nav></div></header>
 <main>
 <section class="wrap hero">
-<div class="hero-art"><img src="assets/927.png" alt="PIXORUN emblem"></div>
-<div class="eyebrow">BUILDING ON ROBINHOOD CHAIN</div>
-<h1>PIXORUN<br><span>BUILD THE NEXT</span></h1>
-<p class="hero-copy">A community-driven token launchpad ecosystem, built step by step on Robinhood Chain.</p>
-<div class="status">PRIVATE BETA <span>•</span> GENESIS PASS HOLDERS ONLY</div>
-<div class="actions"><a class="btn" href="/Pixorun/gtd/">TRY FOR GTD</a></div>
+<div class="eyebrow">THE NEXT GENERATION LAUNCHPAD</div>
+<h1>YOUR TOKEN.<br><span>YOUR MOMENT.</span><br>YOUR RUN.</h1>
+<p class="hero-copy">Launch tokens. Discover opportunities. Build your place in the Robinhood Chain ecosystem.</p>
+<div class="status">BUILT ON ROBINHOOD CHAIN <span>•</span> PRIVATE BETA</div>
+<div class="actions"><a class="btn" href="/Pixorun/launchpad/">EXPLORE LAUNCHPAD ↗</a><a class="btn secondary" href="/Pixorun/genesis/">GET GENESIS PASS</a></div>
+<div class="hero-art"><img src="assets/927.png" alt="PIXORUN energy core"></div>
 </section>
-<section class="section"><div class="wrap"><div class="section-head"><div class="kicker">THE ECOSYSTEM</div><h2>ONE VISION. THREE CORE PILLARS.</h2><p>A focused foundation for launching, testing and growing onchain projects.</p></div>
+<section class="section"><div class="wrap launch-preview">
+<div class="launch-copy"><div class="kicker">PIXORUN LAUNCHPAD</div><h2>FROM IDEA TO<br>ONCHAIN TOKEN.</h2><p>A focused token launch experience is taking shape on Robinhood Chain. Create, launch and explore with transparent mechanics—starting with our Genesis Pass private beta.</p><a class="btn" href="/Pixorun/launchpad/">EXPLORE LAUNCHPAD ↗</a></div>
+<div class="preview-shell"><div class="preview-top"><span>LAUNCHPAD / PREVIEW</span><span class="preview-tag">BETA PREVIEW</span></div><div class="preview-token"><div class="token-icon">P</div><div><div class="token-name">PIXORUN TOKEN LAUNCH</div><div class="token-sub">Launch interface concept · Not live</div></div></div><div class="preview-metrics"><div class="metric"><small>NETWORK</small><strong>Robinhood Testnet</strong></div><div class="metric"><small>ACCESS</small><strong>Genesis Pass</strong></div><div class="metric"><small>TOKEN MODEL</small><strong>Fixed Supply</strong></div><div class="metric"><small>WALLET LIMIT</small><strong>1 Token / Wallet</strong></div></div><p class="preview-note">Illustrative interface only. Token creation and trading are not live during this preview.</p></div>
+</div></section><section class="section"><div class="wrap"><div class="section-head"><div class="kicker">THE ECOSYSTEM</div><h2>ONE VISION. THREE CORE PILLARS.</h2><p>A focused foundation for launching, testing and growing onchain projects.</p></div>
 <div class="cards">
 <article class="card"><div class="number">01 / ACCESS</div><h3>GENESIS PASS</h3><p>Entry to the PIXORUN Private Testnet and its early testing community.</p></article>
 <article class="card"><div class="number">02 / PRODUCT</div><h3>TOKEN LAUNCHPAD</h3><p>A launchpad experience designed around simple token creation and transparent mechanics.</p></article>
