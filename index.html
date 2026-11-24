@@ -1,89 +1,82 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07050d">
-<meta name="description" content="PIXORUN is building a token launchpad ecosystem on Robinhood Chain. Private beta access is reserved for Genesis Pass holders.">
+<meta name="description" content="PIXORUN is building a token launchpad ecosystem on Robinhood Chain.">
 <title>PIXORUN — Build the Next</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#07050d;--panel:#100b1c;--text:#f8efff;--muted:#c2afd5;--purple:#bd62ff;--line:#8d45c9}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
-body{font-family:'VT323',monospace;font-size:22px;line-height:1.4;background-image:linear-gradient(rgba(167,76,255,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(167,76,255,.065) 1px,transparent 1px),radial-gradient(ellipse at 50% 0,#29103f 0,transparent 55%);background-size:8px 8px,8px 8px,auto;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #8d45c955;position:relative;z-index:10}
-.logo img{width:145px;height:auto;display:block;filter:drop-shadow(0 0 12px #8d2cff55)}
-.menu-wrap{position:relative;margin-left:auto;z-index:20}
-.menu-toggle{width:48px;height:48px;display:grid;place-items:center;border:2px solid #c16aff;background:#160d25;color:#fff;box-shadow:4px 4px 0 #4e1b79;cursor:pointer}
-.menu-toggle .dots{font:32px monospace;transform:translateY(-2px)}
-.menu-pop{position:absolute;right:0;top:calc(100% + 12px);width:225px;padding:9px;display:none;background:#10091b;border:2px solid #c16aff;box-shadow:6px 6px 0 #4e1b79;z-index:30}
-.menu-pop.open{display:block}
-.menu-pop a{display:flex;justify-content:space-between;padding:13px 14px;min-height:48px;color:#fff;background:#170e26;border-bottom:1px solid #5d3183;font:21px 'VT323',monospace}
-.menu-pop a:hover,.menu-pop a.active{background:#6f2ca5}
-.home{min-height:calc(100svh - 83px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px 0 58px;position:relative}
-.home:before{content:"";position:absolute;width:min(780px,100%);height:520px;top:6%;left:50%;transform:translateX(-50%);background:radial-gradient(ellipse,#8427c633,transparent 68%);pointer-events:none}
-.visual{width:min(470px,88vw);height:245px;position:relative;perspective:900px;z-index:1}
-.orbit{position:absolute;inset:28px 55px;border:1px solid #c18aff88;border-radius:50%;transform:rotateX(67deg) rotateZ(-18deg);box-shadow:0 0 42px #982dff44,inset 0 0 30px #982dff33;animation:orbit 14s linear infinite}
-.orbit.second{inset:12px 35px;transform:rotateX(67deg) rotateZ(48deg);border-color:#ed65ff66;animation-duration:19s}
-.core{position:absolute;inset:30px 0;display:grid;place-items:center;animation:float 5s ease-in-out infinite}
-.core img{height:210px;width:auto;max-width:80%;object-fit:contain;filter:drop-shadow(0 0 30px #a52cff88)}
-@keyframes orbit{to{transform:rotateX(67deg) rotateZ(342deg)}}
-@keyframes float{0%,100%{transform:translateY(0) rotateY(-4deg)}50%{transform:translateY(-11px) rotateY(5deg)}}
-.eyebrow{display:inline-block;margin:10px 0 14px;padding:9px 12px;border:1px solid #a94aff66;background:#160d25;color:#d9b5ff;font:9px 'Press Start 2P',monospace;line-height:1.8;letter-spacing:.04em;z-index:1}
-h1{position:relative;margin:12px 0 16px;font:clamp(26px,5.4vw,48px)/1.55 'Press Start 2P',monospace;letter-spacing:-.04em;text-shadow:0 8px 40px #000;z-index:1}
-h1 span{color:#c58aff}
-.description{max-width:660px;margin:0 auto;color:var(--muted);font-size:25px;z-index:1}
-.status{margin-top:25px;padding:10px 15px;border:1px solid #a94aff66;background:#160d25;color:#f0dcff;font:9px/1.9 'Press Start 2P',monospace;z-index:1}
-.status span{color:#bd62ff;padding:0 5px}
-.action{margin-top:25px;z-index:1}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 20px;border:2px solid #d18aff;background:#7c29bd;color:#fff;box-shadow:4px 4px 0 #4e1b79;font:10px/1.7 'Press Start 2P',monospace;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #6b2a9b}
-@media(max-width:600px){.nav{height:70px}.logo img{width:125px}.home{min-height:calc(100svh - 71px);padding:24px 0 42px}.visual{height:205px}.core img{height:178px}.description{font-size:22px}.eyebrow,.status{font-size:8px}.btn{font-size:9px;padding:12px 14px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'VT323',monospace;font-size:22px;line-height:1.4;background-image:linear-gradient(rgba(167,76,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(167,76,255,.055) 1px,transparent 1px),radial-gradient(ellipse at 50% 0,#29103f 0,transparent 55%);background-size:8px 8px,8px 8px,auto;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #8d45c955;position:relative;z-index:10}
+.brand{display:flex;align-items:center;gap:12px;font:700 21px 'Press Start 2P',monospace;letter-spacing:-1px;color:#fff;text-shadow:0 0 22px #a52cff77}
+.brand-symbol{width:42px;height:42px;display:grid;place-items:center;border:2px solid #c16aff;background:linear-gradient(145deg,#29103f,#10091b);box-shadow:4px 4px 0 #4e1b79;color:#d8a6ff;font:28px 'VT323',monospace}
+.menu-wrap{position:relative;margin-left:auto;z-index:20}.menu-toggle{width:48px;height:48px;display:grid;place-items:center;border:2px solid #c16aff;background:#160d25;color:#fff;box-shadow:4px 4px 0 #4e1b79;cursor:pointer}.menu-toggle .dots{font:32px monospace;transform:translateY(-2px)}
+.menu-pop{position:absolute;right:0;top:calc(100% + 12px);width:225px;padding:9px;display:none;background:#10091b;border:2px solid #c16aff;box-shadow:6px 6px 0 #4e1b79;z-index:30}.menu-pop.open{display:block}.menu-pop a{display:flex;justify-content:space-between;padding:13px 14px;min-height:48px;color:#fff;background:#170e26;border-bottom:1px solid #5d3183;font:21px 'VT323',monospace}.menu-pop a:hover,.menu-pop a.active{background:#6f2ca5}
+.hero{min-height:680px;padding:55px 0 75px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,#8427c633,transparent 60%);pointer-events:none}
+.hero-art{height:285px;width:min(510px,90vw);position:relative;display:grid;place-items:center;perspective:1000px;z-index:1}
+.hero-art:before,.hero-art:after{content:"";position:absolute;width:390px;height:155px;max-width:85vw;border:1px solid #c18aff88;border-radius:50%;transform:rotateX(67deg) rotateZ(-18deg);box-shadow:0 0 42px #982dff44,inset 0 0 30px #982dff33;animation:orbit 15s linear infinite}
+.hero-art:after{width:440px;transform:rotateX(67deg) rotateZ(48deg);border-color:#ed65ff66;animation-duration:21s}
+.hero-art img{position:relative;z-index:1;width:250px;height:250px;object-fit:contain;filter:drop-shadow(0 0 34px #a52cff88);animation:float 5s ease-in-out infinite}
+@keyframes orbit{to{transform:rotateX(67deg) rotateZ(342deg)}}@keyframes float{0%,100%{transform:translateY(0) rotateY(-4deg)}50%{transform:translateY(-12px) rotateY(5deg)}}
+.eyebrow{display:inline-block;margin:5px 0 16px;padding:9px 13px;border:1px solid #a94aff66;background:#160d25;color:#d9b5ff;font:9px 'Press Start 2P',monospace;line-height:1.8;z-index:1}
+h1,h2,h3{font-family:'Press Start 2P',monospace;letter-spacing:-.04em}h1{position:relative;margin:10px 0 18px;font-size:clamp(27px,5.5vw,52px);line-height:1.55;text-shadow:0 8px 40px #000;z-index:1}h1 span{color:#c58aff}
+.hero-copy{max-width:700px;margin:0 auto;color:var(--muted);font-size:26px;z-index:1}
+.status{margin-top:24px;padding:10px 15px;border:1px solid #a94aff66;background:#160d25;color:#f0dcff;font:9px/1.9 'Press Start 2P',monospace;z-index:1}.status span{color:#bd62ff;padding:0 5px}
+.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:27px;z-index:1}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 18px;border:2px solid #d18aff;background:#7c29bd;color:#fff;box-shadow:4px 4px 0 #4e1b79;font:9px/1.8 'Press Start 2P',monospace;transition:.2s}.btn.secondary{background:#160d25;border-color:#8d45c9}.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #6b2a9b}
+.section{padding:70px 0;border-top:1px solid #8d45c933}.section-head{text-align:center;max-width:740px;margin:0 auto 34px}.kicker{color:#c58aff;font:9px 'Press Start 2P',monospace;line-height:1.8}.section h2{font-size:clamp(17px,3vw,26px);line-height:1.7;margin:14px 0}.section-head p{font-size:24px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:190px;padding:24px 22px;background:linear-gradient(145deg,#160e23,#0d0914);border:1px solid #8d45c988;box-shadow:5px 5px 0 #28103e}.card .number{font:10px 'Press Start 2P',monospace;color:#bd62ff}.card h3{font-size:12px;line-height:1.8;margin:22px 0 12px}.card p{font-size:23px;color:var(--muted);margin:0}
+.pass-panel{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:45px;padding:32px;border:1px solid #a34cff66;background:radial-gradient(circle at 20% 50%,#8e2cff22,transparent 55%),linear-gradient(135deg,#171020,#09090f 70%);box-shadow:8px 8px 0 #28103e}
+.pass-visual{min-height:300px;display:grid;place-items:center;position:relative}.pass-visual img{width:min(300px,90%);max-height:300px;object-fit:contain;filter:drop-shadow(0 0 32px #a52cff66);animation:float 6s ease-in-out infinite}
+.pass-copy h2{font-size:clamp(17px,2.6vw,25px);line-height:1.7;margin:13px 0}.pass-copy p{font-size:24px;color:var(--muted);max-width:480px}
+.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.phase{padding:17px 13px;min-height:145px;background:#100b1c;border:1px solid #66359a;box-shadow:4px 4px 0 #28103e}.phase small{font:8px 'Press Start 2P',monospace;color:#bd62ff;line-height:1.8}.phase h3{font-size:9px;line-height:1.8;margin:15px 0 9px}.phase p{font-size:20px;color:var(--muted);margin:0}
+.footer{padding:28px 0 38px;border-top:1px solid #8d45c955;text-align:center;color:#9f8caf;font-size:19px}
+@media(max-width:850px){.cards{grid-template-columns:1fr}.card{min-height:unset}.pass-panel{grid-template-columns:1fr;gap:10px}.pass-visual{min-height:230px}.journey{grid-template-columns:repeat(2,1fr)}.phase:last-child{grid-column:1/-1}}
+@media(max-width:600px){.nav{height:72px}.brand{font-size:15px}.brand-symbol{width:38px;height:38px}.hero{min-height:610px;padding:35px 0 55px}.hero-art{height:230px}.hero-art img{width:205px;height:205px}.hero-art:before{height:125px}.hero-art:after{height:140px}.hero-copy{font-size:22px}.eyebrow,.status{font-size:8px}.section{padding:54px 0}.pass-panel{padding:18px}.journey{grid-template-columns:1fr}.phase:last-child{grid-column:auto}.btn{font-size:8px;padding:12px 13px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <header class="wrap nav">
-<a class="logo" href="/Pixorun/" aria-label="PIXORUN home"><img src="assets/924(1).png" alt="PIXORUN"></a>
-<div class="menu-wrap">
-<button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button>
+<a class="brand" href="/Pixorun/" aria-label="PIXORUN home"><span class="brand-symbol">P</span><span>PIXORUN</span></a>
+<div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button>
 <nav class="menu-pop" id="site-menu" aria-label="Site pages">
-<a href="/Pixorun/" class="active">Home<span>↗</span></a>
-<a href="/Pixorun/about/">About<span>↗</span></a>
-<a href="/Pixorun/gtd/">GTD<span>↗</span></a>
-<a href="/Pixorun/launchpad/">Launchpad<span>↗</span></a>
-<a href="/Pixorun/genesis/">Genesis Pass<span>↗</span></a>
-<a href="/Pixorun/roadmap/">Roadmap<span>↗</span></a>
-<a href="/Pixorun/documents/">Documents<span>↗</span></a>
-</nav>
-</div>
-</header>
+<a href="/Pixorun/" class="active">Home<span>↗</span></a><a href="/Pixorun/about/">About<span>↗</span></a><a href="/Pixorun/gtd/">GTD<span>↗</span></a><a href="/Pixorun/launchpad/">Launchpad<span>↗</span></a><a href="/Pixorun/genesis/">Genesis Pass<span>↗</span></a><a href="/Pixorun/roadmap/">Roadmap<span>↗</span></a><a href="/Pixorun/documents/">Documents<span>↗</span></a>
+</nav></div></header>
 <main>
-<section class="wrap home">
-<div class="visual" aria-hidden="true"><div class="orbit"></div><div class="orbit second"></div><div class="core"><img src="assets/927.png" alt=""></div></div>
+<section class="wrap hero">
+<div class="hero-art"><img src="assets/927.png" alt="PIXORUN emblem"></div>
 <div class="eyebrow">BUILDING ON ROBINHOOD CHAIN</div>
 <h1>PIXORUN<br><span>BUILD THE NEXT</span></h1>
-<p class="description">A token launchpad ecosystem on Robinhood Chain, beginning with a Genesis Pass–gated private beta.</p>
+<p class="hero-copy">A community-driven token launchpad ecosystem, built step by step on Robinhood Chain.</p>
 <div class="status">PRIVATE BETA <span>•</span> GENESIS PASS HOLDERS ONLY</div>
-<div class="action"><a class="btn" href="/Pixorun/genesis/">EXPLORE GENESIS PASS</a></div>
+<div class="actions"><a class="btn" href="/Pixorun/genesis/">EXPLORE GENESIS PASS</a><a class="btn secondary" href="/Pixorun/about/">DISCOVER PIXORUN</a></div>
 </section>
+<section class="section"><div class="wrap"><div class="section-head"><div class="kicker">THE ECOSYSTEM</div><h2>ONE VISION. THREE CORE PILLARS.</h2><p>A focused foundation for launching, testing and growing onchain projects.</p></div>
+<div class="cards">
+<article class="card"><div class="number">01 / ACCESS</div><h3>GENESIS PASS</h3><p>Entry to the PIXORUN Private Testnet and its early testing community.</p></article>
+<article class="card"><div class="number">02 / PRODUCT</div><h3>TOKEN LAUNCHPAD</h3><p>A launchpad experience designed around simple token creation and transparent mechanics.</p></article>
+<article class="card"><div class="number">03 / COMMUNITY</div><h3>BUILT TOGETHER</h3><p>Early participants help test, provide feedback and shape the ecosystem.</p></article>
+</div></div></section>
+<section class="section"><div class="wrap pass-panel">
+<div class="pass-visual"><img src="assets/927.png" alt="PIXORUN Genesis Pass artwork"></div>
+<div class="pass-copy"><div class="kicker">GENESIS PASS</div><h2>YOUR ACCESS<br>STARTS HERE.</h2><p>Private Beta access is reserved for Genesis Pass holders. Be part of the first testing phase of PIXORUN.</p><a class="btn" href="/Pixorun/genesis/">VIEW GENESIS PASS</a></div>
+</div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div class="kicker">DEVELOPMENT JOURNEY</div><h2>BUILT IN CLEAR STAGES.</h2><p>From private testing to the full ecosystem launch.</p></div>
+<div class="journey">
+<article class="phase"><small>01 / ACCESS</small><h3>GENESIS PASS</h3><p>Private access pass.</p></article>
+<article class="phase"><small>02 / PRIVATE</small><h3>PRIVATE TESTNET</h3><p>Genesis Pass holders.</p></article>
+<article class="phase"><small>03 / PUBLIC</small><h3>PUBLIC TESTNET</h3><p>Community testing.</p></article>
+<article class="phase"><small>04 / BUILD</small><h3>ECOSYSTEM BUILD</h3><p>Core product development.</p></article>
+<article class="phase"><small>05 / LAUNCH</small><h3>MAINNET</h3><p>Production launch.</p></article>
+</div></div></section>
 </main>
+<footer class="footer"><div class="wrap">PIXORUN · BUILD THE NEXT · ROBINHOOD CHAIN</div></footer>
 <script>
-(function(){
-const button=document.querySelector('.menu-toggle');
-const menu=document.querySelector('.menu-pop');
-if(!button||!menu)return;
-function setOpen(open){menu.classList.toggle('open',open);button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close site menu':'Open site menu');}
-button.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();setOpen(!menu.classList.contains('open'));});
-menu.addEventListener('click',event=>{if(event.target.closest('a'))setOpen(false);});
-document.addEventListener('click',event=>{if(!menu.contains(event.target)&&!button.contains(event.target))setOpen(false);});
-document.addEventListener('keydown',event=>{if(event.key==='Escape')setOpen(false);});
-})();
+(function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.menu-pop');if(!b||!m)return;function setOpen(v){m.classList.toggle('open',v);b.setAttribute('aria-expanded',String(v));b.setAttribute('aria-label',v?'Close site menu':'Open site menu')}b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();setOpen(!m.classList.contains('open'))});m.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false)});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!b.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)})})();
 </script>
-</body>
-</html>
+</body></html>
