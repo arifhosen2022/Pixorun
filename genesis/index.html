@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07050d">
-<meta name="description" content="PIXORUN Genesis Pass — a limited, transferable NFT granting private beta access to its holder.">
+<meta name="description" content="Discover the PIXORUN Genesis Pass, part of the PIXORUN Genesis Collection.">
 <title>PIXORUN — Genesis Pass</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +46,15 @@ h1 span{color:#c58aff}
 .rule{height:1px;background:#8d45c955;margin:25px 0 18px}
 .note{font-size:22px;color:#d4c0e6;margin:0}
 .note b{color:#f2ddff;font-weight:normal}
+.faq{padding:8px 0 70px}
+.faq-head{text-align:center;margin:0 0 24px}
+.faq-head small{display:inline-block;color:#d9b5ff;font:9px/1.8 'Press Start 2P',monospace;letter-spacing:.02em}
+.faq-head h2{font:clamp(17px,2.4vw,24px)/1.7 'Press Start 2P',monospace;margin:12px 0;color:#f8efff}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.faq-item{padding:19px 20px;border:1px solid #66359a;background:linear-gradient(135deg,#160d25,#0d0815);box-shadow:3px 3px 0 #28103e}
+.faq-item h3{font:10px/1.8 'Press Start 2P',monospace;color:#e3c5ff;margin:0 0 10px}
+.faq-item p{font-size:21px;color:#c2afd5;margin:0}
+@media(max-width:600px){.faq{padding:0 0 48px}.faq-grid{grid-template-columns:1fr}.faq-item{padding:16px}}
 .footer{border-top:1px solid #8d45c955;padding:22px 0;color:#9d8bab;font-size:18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
 .footer a{margin-left:auto;color:#d8a6ff}.footer a:hover{color:#fff}
 @media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.nav{height:74px}.logo img{width:125px}main{padding:35px 0 48px}.pass-layout{grid-template-columns:1fr;gap:30px}.visual{min-height:310px}.visual img{width:min(72%,270px);max-height:270px}.info{text-align:center;padding:0}.sub{margin-bottom:20px}.stats{max-width:480px;margin:auto}.stat{padding:15px 5px}.stat strong{font-size:13px}.footer{font-size:16px}.menu-pop{width:min(250px,82vw)}}
@@ -86,6 +95,15 @@ h1 span{color:#c58aff}
 </div>
 </section>
 </main>
+<section class="wrap faq" aria-labelledby="faq-title">
+<div class="faq-head"><small>GOT QUESTIONS?</small><h2 id="faq-title">GENESIS PASS FAQ</h2></div>
+<div class="faq-grid">
+<article class="faq-item"><h3>What is PIXORUN Genesis Pass?</h3><p>It is an NFT from the PIXORUN Genesis Collection.</p></article>
+<article class="faq-item"><h3>Why was it created?</h3><p>To introduce the PIXORUN Genesis Collection and its early community.</p></article>
+<article class="faq-item"><h3>Is Genesis Pass an NFT?</h3><p>Yes. Genesis Pass is designed as a digital collectible on the blockchain.</p></article>
+<article class="faq-item"><h3>When will more details be shared?</h3><p>Updates about the collection will be announced through PIXORUN’s official channels.</p></article>
+</div>
+</section>
 <footer class="wrap footer"><span>© 2026 PIXORUN</span><a href="https://x.com/pixorun" target="_blank" rel="noopener noreferrer">FOLLOW PIXORUN ON X ↗</a></footer>
 <script>
 (function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.menu-pop');if(!b||!m)return;function setOpen(v){m.classList.toggle('open',v);b.setAttribute('aria-expanded',String(v));b.setAttribute('aria-label',v?'Close site menu':'Open site menu')}b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();setOpen(!m.classList.contains('open'))});m.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false)});document.addEventListener('click',function(e){if(!m.contains(e.target)&&!b.contains(e.target))setOpen(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false)})})();
