@@ -41,8 +41,8 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
 .btn-primary{background:linear-gradient(115deg,#e34cff,#9228ff 48%,#5920d0);box-shadow:0 0 28px #9228ff42,inset 0 1px #ffffff55}
 .btn-primary:hover{box-shadow:0 0 42px #a52cff88}
 .motion-panel{margin:28px auto 0;max-width:920px;height:170px;position:relative;overflow:hidden;border:1px solid #9d4aff44;border-radius:18px;background:radial-gradient(ellipse at 50% 120%,#7e20df55,transparent 60%),linear-gradient(120deg,#09070f,#171020,#08070c);box-shadow:inset 0 0 50px #922aff1b,0 15px 60px #0008}
-.motion-panel:before{content:"";position:absolute;width:170%;height:2px;left:-35%;top:50%;background:linear-gradient(90deg,transparent,#c64aff,#fff,#862aff,transparent);box-shadow:0 0 28px #a52cff;transform:rotate(-13deg);animation:beam 4s ease-in-out infinite}
-.motion-panel:after{content:"PIXORUN  /  THE NEXT LAUNCH LAYER";position:absolute;inset:0;display:grid;place-items:center;color:#e9dfff;font:600 13px "Space Grotesk";letter-spacing:.28em;text-shadow:0 0 20px #a52cff}
+.motion-panel{background-image:linear-gradient(90deg,#08070dbb,#08070d44),url("assets/922.png");background-size:cover;background-position:center}.brand-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}.video-label{position:absolute;z-index:2;inset:0;display:grid;place-items:center;color:#f5eaff;font:600 12px "Space Grotesk";letter-spacing:.28em;text-shadow:0 0 22px #a52cff}.motion-panel:before{content:"";position:absolute;width:170%;height:2px;left:-35%;top:50%;background:linear-gradient(90deg,transparent,#c64aff,#fff,#862aff,transparent);box-shadow:0 0 28px #a52cff;transform:rotate(-13deg);animation:beam 4s ease-in-out infinite}
+.motion-panel:after{content:"";position:absolute;inset:0;display:grid;place-items:center;color:#e9dfff;font:600 13px "Space Grotesk";letter-spacing:.28em;text-shadow:0 0 20px #a52cff}
 @keyframes beam{0%,100%{transform:translateX(-10%) rotate(-13deg);opacity:.45}50%{transform:translateX(10%) rotate(-13deg);opacity:1}}
 .section{position:relative}
 @media(max-width:760px){.brand img{width:126px}.hero{min-height:unset;padding-top:65px}.hero-visual{height:250px;margin-top:25px}.hero-core img{height:205px}.pass-art{min-height:320px}.motion-panel{height:130px}.motion-panel:after{font-size:10px;letter-spacing:.16em}}
@@ -51,7 +51,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
 </head>
 <body>
 <header class="wrap nav">
-  <a class="brand" href="#" aria-label="PIXORUN home"><img src="assets/pixorun-logo.svg" alt="PIXORUN"></a>
+  <a class="brand" href="#" aria-label="PIXORUN home"><img src="assets/924(1).png" alt="PIXORUN"></a>
   <nav class="navlinks" aria-label="Main navigation">
     <a href="#about">About</a><a href="#launchpad">Launchpad</a><a href="#genesis">Genesis Pass</a><a href="#roadmap">Roadmap</a>
     <a class="btn btn-quiet" href="https://github.com/arifhosen2022/Pixorun" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -61,11 +61,16 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
 <section class="hero wrap">
   <div class="eyebrow"><span class="dot"></span> Private beta · Robinhood Chain Testnet</div>
   <h1>Launch tokens.<br><span class="gradient">Build momentum.</span></h1>
-  <div class="hero-visual" aria-hidden="true"><div class="hero-orb"></div><div class="hero-orb two"></div><div class="hero-core"><img src="assets/genesis-pass-3d.svg" alt=""></div></div>
+  <div class="hero-visual" aria-hidden="true"><div class="hero-orb"></div><div class="hero-orb two"></div><div class="hero-core"><img src="assets/927.png" alt=""></div></div>
   <p>A focused launchpad experience for creating and exploring fixed-supply tokens. Built testnet-first, with access reserved for Genesis Pass holders during beta.</p>
   <div class="actions"><a class="btn btn-primary" href="#genesis">Explore Genesis Pass <span>↗</span></a><a class="btn btn-quiet" href="#launchpad">Discover the launchpad</a></div>
   <div class="chain"><span class="chainicon">◆</span> Built for <b>Robinhood Chain Testnet</b> <span>·</span> Chain ID <b>46630</b></div>
-<div class="motion-panel" aria-label="PIXORUN animated visual"></div>
+<div class="motion-panel" aria-label="PIXORUN video preview">
+  <video class="brand-video" autoplay muted loop playsinline preload="metadata" poster="assets/922.png">
+    <source src="assets/928.mp4" type="video/mp4">
+  </video>
+  <span class="video-label">PIXORUN · GENESIS EXPERIENCE</span>
+</div>
 </section>
 <section class="section wrap" id="about">
   <div class="section-head"><div class="kicker">A new way to launch</div><h2>Simple by design.<br><span class="gradient">Built with intention.</span></h2><p>PIXORUN is developing a streamlined token launch experience with clear rules, transparent mechanics, and a private-first beta.</p></div>
@@ -85,7 +90,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
 </section>
 <section class="section wrap" id="genesis">
   <div class="pass">
-    <div class="pass-art" aria-label="PIXORUN Genesis Pass visual"><img src="assets/genesis-pass-3d.svg" alt="PIXORUN Genesis Pass 3D artwork"></div>
+    <div class="pass-art" aria-label="PIXORUN Genesis Pass visual"><img src="assets/927.png" alt="PIXORUN Genesis Pass 3D artwork"></div>
     <div class="pass-copy"><div class="kicker">The key to the beta</div><h2>Genesis Pass</h2><p>A limited collection created for the early PIXORUN community. Genesis Pass holders are intended to receive access to the private beta.</p>
       <div class="stats"><div class="stat"><strong>222</strong><span>Total supply</span></div><div class="stat"><strong>1</strong><span>Pass collection</span></div><div class="stat"><strong>Beta</strong><span>Access utility</span></div></div>
       <a class="btn btn-primary" href="https://opensea.io/" target="_blank" rel="noreferrer">Collection link coming soon</a>
