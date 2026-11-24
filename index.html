@@ -80,6 +80,33 @@ img{image-rendering:auto}
 
 /* Shared PIXORUN menu — identical on every page */
 .menu-wrap{position:relative!important;margin-left:auto!important;z-index:1002!important}.nav{position:relative!important;z-index:1001!important;overflow:visible!important}.menu-toggle{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;display:grid!important;place-items:center!important;border:2px solid #c16aff!important;border-radius:0!important;background:#160d25!important;color:#fff!important;box-shadow:4px 4px 0 #4e1b79!important;cursor:pointer!important;opacity:1!important;position:relative!important;z-index:1003!important}.menu-toggle .dots{font:32px monospace!important;color:#fff!important;opacity:1!important;transform:translateY(-2px)}.menu-pop{position:absolute!important;right:0!important;top:calc(100% + 12px)!important;width:225px!important;padding:9px!important;display:none!important;z-index:1005!important;opacity:1!important;pointer-events:auto!important;background:#10091b!important;border:2px solid #c16aff!important;border-radius:0!important;box-shadow:6px 6px 0 #4e1b79!important;backdrop-filter:none!important}.menu-pop.open{display:block!important;visibility:visible!important;animation:menuIn .16s ease-out}.menu-pop a,.menu-pop a:visited{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:14px!important;min-height:48px!important;color:#fff!important;background:#170e26!important;border-bottom:1px solid #5d3183!important;font:21px 'VT323',monospace!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important}.menu-pop a:hover,.menu-pop a:focus,.menu-pop a.active{background:#6f2ca5!important;color:#fff!important;outline:2px solid #e3baff!important}.menu-pop .menu-social{margin-top:6px!important;border-top:2px solid #c16aff!important}@keyframes menuIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}@media(max-width:760px){.menu-toggle{width:48px!important;height:48px!important}.menu-pop{right:0!important;width:min(250px,82vw)!important}}
+
+/* HOMEPAGE — refined pixel arcade layout */
+.home-hero{min-height:auto!important;padding:42px 0 72px!important;text-align:center}
+.home-hero .hero-visual{height:260px;margin:0 auto 12px}
+.home-hero .hero-core img{height:225px}
+.home-hero .eyebrow{margin:5px auto 12px}
+.home-hero h1{margin:12px auto 16px!important;font-size:clamp(30px,6vw,58px)!important;line-height:1.5!important}
+.home-hero>p{max-width:650px;margin:0 auto;color:#c2afd5;font-size:24px!important}
+.home-hero .actions{margin-top:24px}
+.home-status{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:10px 14px;border:1px solid #a94aff66;background:#160d25;color:#e9d8ff;font:10px 'Press Start 2P',monospace;line-height:1.8}
+.home-status span{color:#bd62ff}
+.home-motion{margin-top:30px;height:190px}
+.home-intro .section-head p{font-size:24px!important}
+.home-intro .feature{min-height:190px}
+.home-intro .feature p,.home-pass .pass-copy p,.home-roadmap .phase p,.cta p{font-size:23px!important}
+.home-pass .pass{gap:34px}
+.home-pass .pass-art{min-height:360px}
+.home-pass .pass-copy h2{font-size:clamp(17px,2.8vw,25px)!important}
+.home-roadmap{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.home-roadmap .phase{min-height:185px;padding:16px 13px}
+.home-roadmap .phase small{font-size:8px!important;line-height:1.8}
+.home-roadmap .phase h3{font-size:10px!important;overflow-wrap:anywhere}
+.home-roadmap .phase p{font-size:20px!important}
+.home-center{text-align:center;margin-top:26px}
+@media(max-width:900px){.home-roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}.home-roadmap .phase:last-child{grid-column:1/-1}}
+@media(max-width:760px){.home-hero{padding:34px 0 48px!important}.home-hero .hero-visual{height:210px}.home-hero .hero-core img{height:185px}.home-hero>p{font-size:21px!important}.home-motion{height:135px}.home-intro .feature{min-height:unset}.home-pass .pass-art{min-height:280px}.home-roadmap{grid-template-columns:1fr}.home-roadmap .phase:last-child{grid-column:auto}.home-roadmap .phase{min-height:unset}.home-status{font-size:8px}.home-pass .pass{padding:15px!important}}
+
 </style>
 </head>
 <body>
@@ -87,7 +114,39 @@ img{image-rendering:auto}
   <a class="brand" href="#" aria-label="PIXORUN home"><img src="assets/924(1).png" alt="PIXORUN"></a>
   <div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button><nav class="menu-pop" id="site-menu" aria-label="Site pages"><a href="/Pixorun/" class="active">Home<span>↗</span></a><a href="/Pixorun/about/" >About<span>↗</span></a><a href="/Pixorun/mission/" >Mission<span>↗</span></a><a href="/Pixorun/launchpad/" >Launchpad<span>↗</span></a><a href="/Pixorun/genesis/" >Genesis Pass<span>↗</span></a><a href="/Pixorun/roadmap/" >Roadmap<span>↗</span></a><a href="/Pixorun/documents/" >Documents<span>↗</span></a></nav></div>
 </header>
-<main><section class="hero wrap" style="min-height:calc(100vh - 100px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:35px 0"><div class="hero-visual" aria-hidden="true"><div class="hero-orb"></div><div class="hero-orb two"></div><div class="hero-core"><img src="assets/927.png" alt=""></div></div><h1 style="margin:12px auto">PIXORUN</h1><p style="font-family:'Press Start 2P',monospace!important;font-size:clamp(10px,2vw,14px)!important;color:#f8efff">PRIVATE BETA<br><br>GENESIS PASS HOLDERS ONLY</p><div class="motion-panel" aria-hidden="true" style="width:min(720px,90vw)"><video class="brand-video" autoplay muted loop playsinline preload="metadata" poster="assets/922.png"><source src="assets/928.mp4" type="video/mp4"></video></div></section></main>
+<main>
+<section class="hero wrap home-hero">
+  <div class="hero-visual" aria-hidden="true"><div class="hero-orb"></div><div class="hero-orb two"></div><div class="hero-core"><img src="assets/927.png" alt=""></div></div>
+  <div class="eyebrow"><span class="dot"></span> BUILDING ON ROBINHOOD CHAIN</div>
+  <h1>PIXORUN<br><span class="gradient">BUILD THE NEXT</span></h1>
+  <p>A community-driven launchpad ecosystem, starting with Genesis Pass access and growing through testnet development.</p>
+  <div class="actions"><a class="btn btn-primary" href="/Pixorun/genesis/">EXPLORE GENESIS PASS</a><a class="btn btn-quiet" href="/Pixorun/roadmap/">VIEW ROADMAP</a></div>
+  <div class="home-status">PRIVATE BETA <span>•</span> GENESIS PASS HOLDERS ONLY</div>
+  <div class="motion-panel home-motion"><video class="brand-video" autoplay muted loop playsinline preload="metadata" poster="assets/922.png"><source src="assets/928.mp4" type="video/mp4"></video><div class="video-label">PIXORUN ECOSYSTEM</div></div>
+</section>
+<section class="section wrap home-intro">
+  <div class="section-head"><div class="kicker">THE PROJECT</div><h2>ONE ECOSYSTEM.<br>BUILT STEP BY STEP.</h2><p>PIXORUN is developing a token launchpad ecosystem on Robinhood Chain. Access, testing and expansion will progress through clear development stages.</p></div>
+  <div class="grid">
+    <article class="feature"><div class="feature-icon">◈</div><h3>GENESIS ACCESS</h3><p>Genesis Pass is the access pass for the PIXORUN Private Testnet.</p></article>
+    <article class="feature"><div class="feature-icon">⌘</div><h3>LAUNCHPAD</h3><p>A focused foundation for token launches and ecosystem growth.</p></article>
+    <article class="feature"><div class="feature-icon">✦</div><h3>COMMUNITY</h3><p>Building with participants through testing, feedback and contribution.</p></article>
+  </div>
+</section>
+<section class="section wrap home-pass"><div class="pass">
+  <div class="pass-art"><img src="assets/927.png" alt="PIXORUN Genesis Pass artwork"></div>
+  <div class="pass-copy"><div class="kicker">GENESIS PASS</div><h2>YOUR ACCESS<br>STARTS HERE.</h2><p>Genesis Pass is the access pass for PIXORUN Private Testnet participation.</p><div class="home-status">PRIVATE TESTNET ACCESS</div><div class="actions" style="justify-content:flex-start"><a class="btn btn-primary" href="/Pixorun/genesis/">VIEW GENESIS PASS</a></div></div>
+</div></section>
+<section class="section wrap"><div class="section-head"><div class="kicker">DEVELOPMENT JOURNEY</div><h2>FIVE STAGES.<br>ONE DIRECTION.</h2><p>PIXORUN will move forward in focused development phases.</p></div>
+  <div class="roadmap home-roadmap">
+    <article class="phase"><small>01 / ACCESS</small><h3>PRIVATE TESTNET ACCESS PASS</h3><p>Genesis Pass release.</p></article>
+    <article class="phase"><small>02 / PRIVATE</small><h3>PRIVATE TESTNET</h3><p>Genesis Pass holders only.</p></article>
+    <article class="phase"><small>03 / PUBLIC</small><h3>PUBLIC TESTNET</h3><p>Open community testing.</p></article>
+    <article class="phase"><small>04 / BUILD</small><h3>ECOSYSTEM BUILD</h3><p>Core products and ecosystem development.</p></article>
+    <article class="phase"><small>05 / LAUNCH</small><h3>MAINNET</h3><p>Mainnet deployment and ecosystem launch.</p></article>
+  </div><div class="home-center"><a class="btn btn-quiet" href="/Pixorun/roadmap/">FULL ROADMAP ↗</a></div>
+</section>
+<section class="section wrap"><div class="cta"><div class="kicker">PIXORUN</div><h2>FOLLOW THE BUILD.</h2><p>Explore the project, read the documentation and follow each development milestone.</p><div class="actions"><a class="btn btn-primary" href="/Pixorun/about/">ABOUT PIXORUN</a><a class="btn btn-quiet" href="/Pixorun/documents/">DOCUMENTS</a></div></div></section>
+</main>
 
 <script>(function(){const b=document.querySelector('.menu-toggle');const m=document.querySelector('.menu-pop');if(!b||!m)return;function setOpen(v){m.classList.toggle('open',v);b.setAttribute('aria-expanded',String(v));b.setAttribute('aria-label',v?'Close site menu':'Open site menu');}b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();setOpen(!m.classList.contains('open'));});m.addEventListener('click',function(e){const link=e.target.closest('a');if(link){setOpen(false);}});document.addEventListener('click',function(e){if(!m.contains(e.target)&&!b.contains(e.target))setOpen(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});})();</script></body>
 </html>
