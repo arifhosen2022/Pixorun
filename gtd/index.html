@@ -114,6 +114,8 @@ let savedProfile=null;try{savedProfile=JSON.parse(localStorage.getItem(PROFILE_K
 if(savedProfile&&savedProfile.username&&savedProfile.wallet&&savedProfile.post)showProfile(savedProfile);
 function showLoading(){backdrop.classList.add('show');visual.innerHTML='<div class="spinner"></div>';title.textContent='Submitting...';message.textContent='Please wait while we securely save your GTD details.';close.style.display='none'}
 function showResult(ok,msg){visual.innerHTML=ok?'<div class="modal-icon">✓</div>':'<div class="modal-icon">!</div>';title.textContent=ok?'Submission Received':'Submission Not Accepted';message.textContent=msg;close.style.display='inline-block'}
+function showRestoreLoading(){backdrop.classList.add('show');visual.innerHTML='<div class="spinner"></div>';title.textContent='Restoring Profile...';message.textContent='Please wait while we securely retrieve your saved PIXORUN profile.';close.style.display='none'}
+function showRestoreResult(ok,msg){visual.innerHTML=ok?'<div class="modal-icon">✓</div>':'<div class="modal-icon">!</div>';title.textContent=ok?'Profile Restored':'Restore Failed';message.textContent=msg;close.style.display='inline-block'}
 close.addEventListener('click',()=>backdrop.classList.remove('show'));
 form.addEventListener('submit',async e=>{e.preventDefault();if(savedProfile){showProfile(savedProfile);return}const completed=Object.values(done).filter(Boolean).length;if(completed!==4){showLoading();showResult(false,'Please complete all four campaign tasks before submitting.');return}
 const recoveryKey=Array.from(crypto.getRandomValues(new Uint8Array(32))).map(b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();
@@ -131,15 +133,15 @@ localStorage.setItem(PROFILE_KEY,JSON.stringify(savedProfile));form.reset();show
 const restoreForm=document.getElementById('restoreForm');
 restoreForm.addEventListener('submit',async e=>{
  e.preventDefault();const key=document.getElementById('restoreKey').value.trim().toUpperCase();
- if(!/^[A-F0-9]{64}$/.test(key)){showLoading();showResult(false,'Recovery Key must contain exactly 64 hexadecimal characters.');return}
- const btn=document.getElementById('restoreBtn');btn.disabled=true;showLoading();
+ if(!/^[A-F0-9]{64}$/.test(key)){showRestoreLoading();showRestoreResult(false,'Please enter the complete 64-character Recovery Key.');return}
+ const btn=document.getElementById('restoreBtn');btn.disabled=true;showRestoreLoading();
  try{
   const res=await fetch('https://ljqggnqvtnomzrxpapfo.supabase.co/functions/v1/submit-gtd',{method:'POST',headers:{'Content-Type':'application/json','apikey':'sb_publishable_2UKZf6rx3rgg04ha0hwBqA_bBOoM5_D'},body:JSON.stringify({action:'recover',recovery_key:key})});
   const data=await res.json();if(!res.ok)throw new Error(data.error||'Profile could not be restored.');
   const shareUrl=location.origin+location.pathname+'?ref='+encodeURIComponent(data.referral_code);
   savedProfile={username:data.username,wallet:data.wallet,post:data.post,taskPoints:Number(data.task_points),referralPoints:Number(data.referral_points),totalPoints:Number(data.total_points),referralCode:data.referral_code,referralLink:shareUrl,recoveryKey:key};
-  localStorage.setItem(PROFILE_KEY,JSON.stringify(savedProfile));showResult(true,'Your PIXORUN profile has been restored successfully.');showProfile(savedProfile);
- }catch(err){showResult(false,err.message||'Profile could not be restored.')}finally{btn.disabled=false}
+  localStorage.setItem(PROFILE_KEY,JSON.stringify(savedProfile));showRestoreResult(true,'Your saved PIXORUN profile is now available on this device.');showProfile(savedProfile);
+ }catch(err){showRestoreResult(false,err.message||'We could not find a profile for this Recovery Key. Please check the key and try again.')}finally{btn.disabled=false}
 });
 
 })();
