@@ -51,8 +51,8 @@ document.querySelectorAll('.task').forEach(card=>card.querySelector('button').ad
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)return;});window.addEventListener('focus',returned);document.addEventListener('visibilitychange',()=>{if(!document.hidden)returned()});window.addEventListener('pageshow',returned);render();if(localStorage.getItem(WAIT_KEY))startWait(JSON.parse(localStorage.getItem(WAIT_KEY)).task);
 const form=document.getElementById('gtdForm'),backdrop=document.getElementById('modalBackdrop'),title=document.getElementById('modalTitle'),message=document.getElementById('modalMessage'),visual=document.getElementById('modalVisual'),close=document.getElementById('modalClose'),submit=document.getElementById('submitBtn');
 function showProfile(profile){
- const campaign=document.getElementById('campaignCard'),submission=document.getElementById('submissionCard'),notice=document.getElementById('gtdNotice'),box=document.getElementById('profileCard');
- campaign.style.display='none';submission.style.display='none';notice.style.display='none';box.style.display='block';
+ const campaign=document.getElementById('campaignCard'),submission=document.getElementById('submissionCard'),notice=document.getElementById('gtdNotice'),restore=document.getElementById('restoreCard'),box=document.getElementById('profileCard');
+ campaign.style.display='none';submission.style.display='none';notice.style.display='none';restore.style.display='none';box.style.display='block';
  document.getElementById('profileUsername').textContent='@'+profile.username;
  document.getElementById('profileWallet').textContent=profile.wallet;
  const post=document.getElementById('profilePost');post.href=profile.post;post.textContent=profile.post;
