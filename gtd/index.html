@@ -58,7 +58,9 @@ function showProfile(profile){
  const post=document.getElementById('profilePost');post.href=profile.post;post.textContent=profile.post;
  document.getElementById('profilePoints').textContent=Number(profile.totalPoints).toFixed(1)+' PTS';
  document.getElementById('profileReferralPoints').textContent=Number(profile.referralPoints).toFixed(1)+' PTS';
- document.getElementById('profileReferralCode').textContent=profile.referralCode;\n document.getElementById('profileRecoveryKey').textContent=profile.recoveryKey||'Not available for older submissions';\n document.getElementById('copyRecoveryKey').onclick=async()=>{if(!profile.recoveryKey)return;try{await navigator.clipboard.writeText(profile.recoveryKey);document.getElementById('copyRecoveryKey').textContent='COPIED'}catch(e){const t=document.createElement('textarea');t.value=profile.recoveryKey;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();document.getElementById('copyRecoveryKey').textContent='COPIED'}};
+ document.getElementById('profileReferralCode').textContent=profile.referralCode;
+ document.getElementById('profileRecoveryKey').textContent=profile.recoveryKey||'Not available for older submissions';
+ document.getElementById('copyRecoveryKey').onclick=async()=>{if(!profile.recoveryKey)return;try{await navigator.clipboard.writeText(profile.recoveryKey);document.getElementById('copyRecoveryKey').textContent='COPIED'}catch(e){const t=document.createElement('textarea');t.value=profile.recoveryKey;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();document.getElementById('copyRecoveryKey').textContent='COPIED'}};
  document.getElementById('profileReferralLink').value=profile.referralLink;
  document.getElementById('copyProfileReferral').onclick=async()=>{const input=document.getElementById('profileReferralLink');try{await navigator.clipboard.writeText(input.value);document.getElementById('copyProfileReferral').textContent='COPIED'}catch(e){input.select();document.execCommand('copy');document.getElementById('copyProfileReferral').textContent='COPIED'}};
 }
@@ -68,7 +70,8 @@ function showLoading(){backdrop.classList.add('show');visual.innerHTML='<div cla
 function showResult(ok,msg){visual.innerHTML=ok?'<div class="modal-icon">✓</div>':'<div class="modal-icon">!</div>';title.textContent=ok?'Submission Received':'Submission Not Accepted';message.textContent=msg;close.style.display='inline-block'}
 close.addEventListener('click',()=>backdrop.classList.remove('show'));
 form.addEventListener('submit',async e=>{e.preventDefault();if(savedProfile){showProfile(savedProfile);return}const completed=Object.values(done).filter(Boolean).length;if(completed!==4){showLoading();showResult(false,'Please complete all four campaign tasks before submitting.');return}
-const recoveryKey=Array.from(crypto.getRandomValues(new Uint8Array(32))).map(b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();\nconst username=document.getElementById('xUsername').value.trim().replace(/^@/,'');const wallet=document.getElementById('evmAddress').value.trim();const post=document.getElementById('postLink').value.trim();const referralCode=document.getElementById('referralCode').value.trim().toUpperCase();
+const recoveryKey=Array.from(crypto.getRandomValues(new Uint8Array(32))).map(b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();
+const username=document.getElementById('xUsername').value.trim().replace(/^@/,'');const wallet=document.getElementById('evmAddress').value.trim();const post=document.getElementById('postLink').value.trim();const referralCode=document.getElementById('referralCode').value.trim().toUpperCase();
 if(!/^[A-Za-z0-9_]{1,15}$/.test(username)){showLoading();showResult(false,'Please enter a valid X username.');return}
 if(!/^0x[a-fA-F0-9]{40}$/.test(wallet)){showLoading();showResult(false,'Please enter a valid EVM wallet address.');return}
 if(!/^https?:\/\/(www\.)?(x\.com|twitter\.com)\/[A-Za-z0-9_]+\/status\/\d+(\?[^\s]*)?$/i.test(post)){showLoading();showResult(false,'Please submit the link to your own PIXORUN X post.');return}
