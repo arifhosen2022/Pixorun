@@ -48,6 +48,9 @@
 .key-details>small{display:block;margin-top:7px;color:#a995b8;font-size:11px}
 @media(max-width:650px){.task-list,.submission-grid{grid-template-columns:1fr}.task{padding:13px}.profile-grid{grid-template-columns:1fr 1fr}.profile-actions{grid-template-columns:1fr}.restore-form{grid-template-columns:1fr}.restore-form .btn{width:100%}.hero{padding-top:26px}}
 
+
+/* Shared PIXORUN footer — consistent across all pages */
+.pixorun-footer{width:100%;margin:56px 0 0;padding:22px 0;border-top:1px solid rgba(193,106,255,.32);background:#0b0711;box-sizing:border-box}.pixorun-footer-inner{width:min(1160px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#a99ab8;font:22px 'VT323',monospace}.pixorun-footer-inner a,.pixorun-footer-inner a:visited{display:inline-flex;align-items:center;gap:8px;color:#e4c8ff;text-decoration:none;font:8px 'Press Start 2P',monospace;letter-spacing:.02em}.pixorun-footer-inner a:hover{color:#fff;text-shadow:0 0 12px #c16aff}.pixorun-footer-inner a span{font:18px monospace}@media(max-width:560px){.pixorun-footer{margin-top:38px;padding:20px 0}.pixorun-footer-inner{width:calc(100% - 32px);flex-direction:column;align-items:flex-start;gap:12px}.pixorun-footer-inner a{font-size:7px}}
 </style></head><body>
 <header class="wrap nav"><a class="logo" href="../"><img src="../assets/924(1).png" alt="PIXORUN"></a><div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button><nav class="menu-pop" id="site-menu" aria-label="Site pages"><a href="/">Home<span>↗</span></a><a href="/gtd/" class="active">GTD<span>↗</span></a><a href="/launchpad/">Launchpad<span>↗</span></a><a href="/genesis/">Genesis Pass<span>↗</span></a><a href="/roadmap/">Roadmap<span>↗</span></a><a href="/documents/">Documents<span>↗</span></a><a href="/about/">About<span>↗</span></a></nav></div></header>
 <main class="wrap"><section class="hero"><span class="eyebrow">PIXORUN COMMUNITY</span><h1>GTD CAMPAIGN</h1><p>Complete the social tasks, then submit your X username, post link and EVM wallet.</p></section><section class="content">
@@ -79,6 +82,7 @@
 <details class="key-details"><summary>Recovery key <span>View / copy</span></summary><strong id="profileRecoveryKey"></strong><button type="button" class="x-link" id="copyRecoveryKey">COPY KEY</button><small>Keep this key private. It restores your profile on another device.</small></details></div>
 </div>
 </section></main>
+<footer class="pixorun-footer"><div class="pixorun-footer-inner"><span>© 2026 PIXORUN</span><a href="https://x.com/pixorun" target="_blank" rel="noopener noreferrer">FOLLOW PIXORUN ON X <span aria-hidden="true">↗</span></a></div></footer>
 <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div id="modalVisual"><div class="spinner"></div></div><h2 id="modalTitle">Submitting...</h2><p id="modalMessage">Please wait while we securely save your GTD details.</p><button id="modalClose" type="button" style="display:none">CLOSE</button></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@4.6.2/dist/fp.min.js" crossorigin="anonymous"></script>
 <script>
