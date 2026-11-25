@@ -67,6 +67,9 @@ h1 span{display:block;color:#c58aff}
 .footer-social:hover{color:#fff;border-color:#c58aff;box-shadow:0 0 22px #a34cff30}
 @media(max-width:760px){.wrap{width:min(100% - 34px,560px)}.nav{height:74px}.logo img{width:125px}.hero{min-height:unset;grid-template-columns:1fr;gap:0;padding:48px 0 58px;text-align:center}.hero-copy{padding:0}.launch-headline{font-size:clamp(17px,4.5vw,25px);line-height:1.8;margin-bottom:16px}.intro-line{font-size:7px;line-height:2.1;margin-bottom:16px}.eyebrow{justify-content:center;margin-bottom:20px;font-size:7px}.hero-art{min-height:290px;margin:0}.hero-art .genesis-video{width:min(500px,96%);max-height:290px}.art-glow{width:min(320px,85vw)}.orbit{width:min(330px,88vw);height:140px}.orbit.two{width:min(370px,96vw);height:155px}.orbit.three{width:min(280px,75vw);height:118px}h1{font-size:clamp(25px,7vw,38px)}.mint-soon{font-size:clamp(9px,2.7vw,13px);line-height:2;padding:0 5px;margin-top:10px}.mint-soon strong{font-size:1.12em}.cta{width:auto;min-height:42px;margin-top:16px;padding:0 17px;font-size:12px}.roadmap{padding:34px 0 60px}.roadmap-head{margin-bottom:18px}.stages{grid-template-columns:1fr;gap:10px}.stage{min-height:94px;padding:17px}.stage small{margin-bottom:11px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Shared PIXORUN footer — consistent across all pages */
+.pixorun-footer{width:100%;margin:56px 0 0;padding:22px 0;border-top:1px solid rgba(193,106,255,.32);background:#0b0711;box-sizing:border-box}.pixorun-footer-inner{width:min(1160px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#a99ab8;font:22px 'VT323',monospace}.pixorun-footer-inner a,.pixorun-footer-inner a:visited{display:inline-flex;align-items:center;gap:8px;color:#e4c8ff;text-decoration:none;font:8px 'Press Start 2P',monospace;letter-spacing:.02em}.pixorun-footer-inner a:hover{color:#fff;text-shadow:0 0 12px #c16aff}.pixorun-footer-inner a span{font:18px monospace}@media(max-width:560px){.pixorun-footer{margin-top:38px;padding:20px 0}.pixorun-footer-inner{width:calc(100% - 32px);flex-direction:column;align-items:flex-start;gap:12px}.pixorun-footer-inner a{font-size:7px}}
 </style>
 </head>
 <body>
@@ -110,7 +113,8 @@ h1 span{display:block;color:#c58aff}
 </div>
 </section>
 </main>
-<footer class="footer"><div class="wrap"><span>© 2026 PIXORUN</span><a class="footer-social" href="https://x.com/pixorun" target="_blank" rel="noopener noreferrer">FOLLOW US ON X <span>↗</span></a></div></footer>
+<footer class="pixorun-footer"><div class="pixorun-footer-inner"><span>© 2026 PIXORUN</span><a href="https://x.com/pixorun" target="_blank" rel="noopener noreferrer">FOLLOW PIXORUN ON X <span aria-hidden="true">↗</span></a></div></footer>
+
 <script>
 (function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.menu-pop');if(!b||!m)return;function setOpen(v){m.classList.toggle('open',v);b.setAttribute('aria-expanded',String(v));b.setAttribute('aria-label',v?'Close site menu':'Open site menu')}b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();setOpen(!m.classList.contains('open'))});m.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false)});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!b.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)})})();
 </script>
