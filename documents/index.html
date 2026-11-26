@@ -1,107 +1,50 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#07050d">
-<meta name="description" content="Official PIXORUN documentation covering its community-driven Web3 ecosystem, Genesis Pass, future launchpad, roadmap and development status.">\n<title>PIXORUN Documentation</title>
-<link rel="stylesheet" href="../styles.css">
-<style>
-.menu-wrap{position:relative!important;margin-left:auto!important;z-index:1002!important}.nav{position:relative!important;z-index:1001!important;overflow:visible!important}.menu-toggle{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;display:grid!important;place-items:center!important;border:2px solid #c16aff!important;background:#160d25!important;color:#fff!important;box-shadow:4px 4px 0 #4e1b79!important;cursor:pointer!important;position:relative!important;z-index:1003!important}.menu-toggle .dots{font:32px monospace!important;color:#fff!important}.menu-pop{position:absolute!important;right:0!important;top:calc(100% + 12px)!important;width:225px!important;padding:9px!important;display:none!important;z-index:1005!important;background:#10091b!important;border:2px solid #c16aff!important;box-shadow:6px 6px 0 #4e1b79!important}.menu-pop.open{display:block!important;visibility:visible!important}.menu-pop a,.menu-pop a:visited{display:flex!important;justify-content:space-between!important;padding:14px!important;min-height:48px!important;color:#fff!important;background:#170e26!important;border-bottom:1px solid #5d3183!important;font:21px 'VT323',monospace!important}.menu-pop a.active,.menu-pop a:hover{background:#6f2ca5!important;color:#fff!important}
-.docs-hero{position:relative;isolation:isolate;overflow:hidden;margin:34px auto 58px;padding:clamp(28px,5vw,58px);min-height:300px;border:2px solid #8b42d0;background:linear-gradient(110deg,#10091d 0%,#1b0c30 52%,#10091d 100%);box-shadow:7px 7px 0 #351653,0 0 55px #8a2cff20;text-align:center}
-.docs-hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.34;background-image:linear-gradient(#a64cff24 1px,transparent 1px),linear-gradient(90deg,#a64cff24 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent)}
-.docs-hero:after{content:"";position:absolute;z-index:-1;width:300px;height:300px;left:50%;top:50%;transform:translate(-50%,-45%);border-radius:50%;background:radial-gradient(circle,#8c35e34a,transparent 68%);filter:blur(8px)}
-.docs-overline{color:#d7a2ff;font:9px/2 'Press Start 2P',monospace;letter-spacing:.08em}
-.docs-hero h1{margin:18px 0 14px;color:#fff;font:clamp(24px,4.5vw,42px)/1.5 'Press Start 2P',monospace;text-shadow:0 0 28px #a64cff88}
-.docs-hero h1 span{display:block;color:#d59cff}
-.docs-hero p{max-width:650px;margin:0 auto;color:#d0bbdf;font:22px/1.35 'VT323',monospace}
-.docs-hero .hero-stamp{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:9px 13px;border:1px solid #b75aff;background:#190d2a;color:#e7c9ff;font:8px 'Press Start 2P',monospace;box-shadow:3px 3px 0 #54227e}
-.hero-stamp i{width:7px;height:7px;background:#d4ff55;box-shadow:0 0 12px #d4ff55;display:inline-block}
-.docs-section{margin:0 0 54px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px;padding:0 0 13px;border-bottom:2px solid #6b3695}
-.section-index{display:block;margin-bottom:10px;color:#bd72ff;font:8px 'Press Start 2P',monospace}
-.section-head h2{margin:0;color:#f5eaff;font:clamp(14px,2vw,19px)/1.6 'Press Start 2P',monospace}
-.section-head p{margin:0;color:#a993bc;font:18px 'VT323',monospace}
-.docs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.doc-card{position:relative;display:flex;flex-direction:column;min-height:205px;padding:20px 19px 18px;background:linear-gradient(145deg,#171026,#0d0915);border:2px solid #573078;box-shadow:4px 4px 0 #241135;transition:transform .2s,border-color .2s,box-shadow .2s;overflow:hidden}
-.doc-card:before{content:"";position:absolute;right:-28px;top:-30px;width:90px;height:90px;border:1px solid #a34cff35;transform:rotate(45deg);box-shadow:0 0 0 10px #a34cff08,0 0 0 20px #a34cff05}
-.doc-card:hover{transform:translate(-2px,-2px);border-color:#b86bff;box-shadow:6px 6px 0 #54227e}
-.doc-tag{position:relative;z-index:1;color:#c987ff;font:8px/1.8 'Press Start 2P',monospace;letter-spacing:.02em}
-.doc-card h3{position:relative;z-index:1;margin:13px 0 8px;color:#fff;font:12px/1.8 'Press Start 2P',monospace}
-.doc-card p{position:relative;z-index:1;margin:0 0 18px;color:#c0afcf;font:20px/1.35 'VT323',monospace}
-.doc-state,.doc-link{position:relative;z-index:1;align-self:flex-start;margin-top:auto;padding:6px 9px;border:1px solid #8d4db5;background:#211130;color:#e2c1ff;font:17px 'VT323',monospace}
-.doc-state:before{content:"";display:inline-block;width:6px;height:6px;margin:0 7px 1px 0;background:#bd72ff}
-.doc-link{color:#fff;border-color:#b35aff;background:#60228c}
-.doc-link:hover{background:#8137b7}
-.docs-note{margin:12px 0 0;padding:16px 18px;border:1px dashed #75429a;background:#100b19;color:#c3b1d2;text-align:center;font:19px/1.4 'VT323',monospace}
-@media(max-width:800px){.docs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.docs-hero{margin:26px auto 46px;min-height:260px}}
-@media(max-width:560px){.docs-grid{grid-template-columns:1fr}.docs-hero{padding:30px 17px;min-height:240px}.docs-hero h1{font-size:22px}.docs-hero p{font-size:20px}.section-head{align-items:flex-start;flex-direction:column;gap:3px}.doc-card{min-height:175px}.docs-section{margin-bottom:42px}.menu-pop{right:0!important;width:min(250px,82vw)!important}}
-
-/* Shared PIXORUN footer — consistent across all pages */
-.pixorun-footer{width:100%;margin:56px 0 0;padding:22px 0;border-top:1px solid rgba(193,106,255,.32);background:#0b0711;box-sizing:border-box}.pixorun-footer-inner{width:min(1160px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#a99ab8;font:22px 'VT323',monospace}.pixorun-footer-inner a,.pixorun-footer-inner a:visited{display:inline-flex;align-items:center;gap:8px;color:#e4c8ff;text-decoration:none;font:8px 'Press Start 2P',monospace;letter-spacing:.02em}.pixorun-footer-inner a:hover{color:#fff;text-shadow:0 0 12px #c16aff}.pixorun-footer-inner a span{font:18px monospace}@media(max-width:560px){.pixorun-footer{margin-top:38px;padding:20px 0}.pixorun-footer-inner{width:calc(100% - 32px);flex-direction:column;align-items:flex-start;gap:12px}.pixorun-footer-inner a{font-size:7px}}
-</style>
-</head>
-<body>
-<header class="wrap nav">
-<a class="logo" href="../" aria-label="PIXORUN home"><img src="../assets/924(1).png" alt="PIXORUN"></a>
-<div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button>
-<nav class="menu-pop" id="site-menu" aria-label="Site pages">
-<a href="/">Home<span>↗</span></a><a href="/gtd/">GTD<span>↗</span></a><a href="/launchpad/">Launchpad<span>↗</span></a><a href="/genesis/">Genesis Pass<span>↗</span></a><a href="/roadmap/">Roadmap<span>↗</span></a><a href="/documents/" class="active">Documents<span>↗</span></a><a href="/about/">About<span>↗</span></a>
-</nav></div></header>
-<main class="wrap">
-<section class="docs-hero">
-<div class="docs-overline">OFFICIAL PROJECT DOCUMENTATION</div>
-<h1>PIXORUN <span>DOCUMENTS</span></h1>
-<p>The vision, products, network direction and development plans behind the PIXORUN ecosystem.</p>
-</section>
-
-<section class="docs-section">
-<div class="section-head"><div><span class="section-index">PROJECT</span><h2>ABOUT PIXORUN</h2></div><p>Purpose and ecosystem</p></div>
-<div class="docs-grid">
-<article class="doc-card"><span class="doc-tag">OVERVIEW</span><h3>What is PIXORUN?</h3><p>PIXORUN is a community-driven Web3 ecosystem being built on Robinhood Chain. It brings together community participation, digital collectibles and future reputation-focused products.</p><span class="doc-state">Project overview</span></article>
-<article class="doc-card"><span class="doc-tag">ECOSYSTEM</span><h3>Core Products</h3><p>PIXORUN is being built foundation-first. Its planned ecosystem includes the Genesis Pass collection, community participation and a future reputation-focused token launchpad, with room to expand into more Web3 products.</p><span class="doc-state">In development</span></article>
-<article class="doc-card"><span class="doc-tag">DEVELOPMENT</span><h3>Development Roadmap</h3><p>Development is planned in stages: ecosystem foundation, Genesis Pass, Private Beta Testing, Public Beta Testnet, ecosystem expansion and Mainnet preparation.</p><a class="doc-link" href="/roadmap/">VIEW ROADMAP ↗</a></article>
-</div>
-</section>
-
-<section class="docs-section">
-<div class="section-head"><div><span class="section-index">PRODUCTS</span><h2>PIXORUN PRODUCTS</h2></div><p>What each product is for</p></div>
-<div class="docs-grid">
-<article class="doc-card"><span class="doc-tag">GENESIS NFT</span><h3>PIXORUN Genesis Pass</h3><p>The Genesis Pass is the first planned NFT collection in the PIXORUN ecosystem. It introduces the project’s digital collectible layer and early community identity. Collection details will be announced through official PIXORUN channels.</p><a class="doc-link" href="/genesis/">GENESIS PASS DETAILS ↗</a></article>
-<article class="doc-card"><span class="doc-tag">TOKEN LAUNCHPAD</span><h3>PIXORUN Launchpad</h3><p>The future PIXORUN Launchpad is intended to make token creation more responsible by considering wallet history and social reputation as part of launch eligibility. It is a planned ecosystem product, not a live token-launch service.</p><a class="doc-link" href="/launchpad/">LAUNCHPAD STATUS ↗</a></article>
-<article class="doc-card"><span class="doc-tag">COMMUNITY CAMPAIGN</span><h3>GTD Campaign</h3><p>The GTD campaign lets participants complete social tasks, submit an X username, an original post link and an EVM wallet address, and earn campaign points.</p><a class="doc-link" href="/gtd/">OPEN GTD CAMPAIGN ↗</a></article>
-</div>
-</section>
-
-<section class="docs-section">
-<div class="section-head"><div><span class="section-index">NETWORK &amp; DESIGN</span><h2>TECHNICAL OVERVIEW</h2></div><p>Network and planned mechanics</p></div>
-<div class="docs-grid">
-<article class="doc-card"><span class="doc-tag">SUPPORTED NETWORK</span><h3>Robinhood Chain Testnet</h3><p>PIXORUN is being developed testnet-first on Robinhood Chain Testnet. Chain ID: 46630. Product functionality and network integrations will be introduced and tested in stages.</p><p><a class="doc-link" href="https://explorer.testnet.chain.robinhood.com/" target="_blank" rel="noopener noreferrer">OPEN BLOCK EXPLORER ↗</a></p></article>
-<article class="doc-card"><span class="doc-tag">BETA DESIGN</span><h3>Reputation-Based Launch Design</h3><p>The future launchpad is planned to consider on-chain wallet reputation and social reputation when assessing token creators. The detailed scoring and launch mechanics will be published before testing.</p><span class="doc-state">Future product design</span></article>
-<article class="doc-card"><span class="doc-tag">FUTURE FEATURES</span><h3>Future Ecosystem Products</h3><p>Additional Web3 products and on-chain features may be explored as the ecosystem develops. No unannounced feature, token, liquidity or staking utility should be treated as live or guaranteed.</p><span class="doc-state">Future exploration</span></article>
-</div>
-</section>
-
-<section class="docs-section">
-<div class="section-head"><div><span class="section-index">COMMUNITY</span><h2>GTD CAMPAIGN RULES</h2></div><p>Points and participation</p></div>
-<div class="docs-grid">
-<article class="doc-card"><span class="doc-tag">TASK POINTS</span><h3>How Points Are Earned</h3><p>Follow @pixorun: 0.2 points. Like the campaign post: 0.3. Retweet it: 0.3. Publish an original post mentioning @pixorun: 0.5. Completing all four tasks earns 1.3 points.</p><a class="doc-link" href="/gtd/">VIEW CAMPAIGN ↗</a></article>
-<article class="doc-card"><span class="doc-tag">REFERRALS</span><h3>Referral Points</h3><p>A successful referral is counted only after the invited participant completes all campaign tasks and submits. The referrer receives 1.0 point and the new participant receives 0.5 point. A maximum of 20 successful referrals can earn points per referrer.</p><span class="doc-state">Campaign rules</span></article>
-<article class="doc-card"><span class="doc-tag">PARTICIPATION</span><h3>Submission &amp; Eligibility</h3><p>Participants submit their X username, campaign post URL and EVM wallet. There is no minimum X follower requirement. Completing tasks or earning points does not guarantee eligibility or any token allocation.</p><span class="doc-state">Important information</span></article>
-</div>
-</section>
-
-<section class="docs-section">
-<div class="section-head"><div><span class="section-index">STATUS &amp; SAFETY</span><h2>IMPORTANT INFORMATION</h2></div><p>What is live and what is not</p></div>
-<div class="docs-grid">
-<article class="doc-card"><span class="doc-tag">CURRENT STATUS</span><h3>Testnet-First Development</h3><p>The website and GTD campaign are available. The Genesis Pass release, launchpad, token deployment and other on-chain product features are still under development and are not live unless announced officially.</p><span class="doc-state">Features under development</span></article>
-<article class="doc-card"><span class="doc-tag">USER SAFETY</span><h3>Verify Before You Interact</h3><p>Use links shared by official PIXORUN channels. Always verify the network and contract address before connecting a wallet or signing a transaction. Never share your wallet recovery phrase or private key.</p><span class="doc-state">Safety guidance</span></article>
-<article class="doc-card"><span class="doc-tag">RISK NOTICE</span><h3>No Guarantees</h3><p>Blockchain networks, smart contracts and digital assets involve risk. Testnet features may change. Campaign participation, points, referrals or holding an NFT do not guarantee financial returns or token allocation.</p><span class="doc-state">Please read carefully</span></article>
-</div>
-<div class="docs-note">Only announcements and links published by official PIXORUN channels should be treated as authoritative. Product features and plans may change during development.</div>
-</section>
-</main>
-<footer class="pixorun-footer"><div class="pixorun-footer-inner"><span>© 2026 PIXORUN</span><a href="https://x.com/pixorun" target="_blank" rel="noopener noreferrer">FOLLOW PIXORUN ON X <span aria-hidden="true">↗</span></a></div></footer>
-
-<script>(function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.menu-pop');if(!b||!m)return;function setOpen(v){m.classList.toggle('open',v);b.setAttribute('aria-expanded',String(v));b.setAttribute('aria-label',v?'Close site menu':'Open site menu')}b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();setOpen(!m.classList.contains('open'))});m.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false)});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!b.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)})})();</script>
-</body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07050d"><title>Documents | PIXORUN</title><link rel="stylesheet" href="../styles.css"><style>.menu-wrap{position:relative!important;margin-left:auto!important;z-index:1002!important}.nav{position:relative!important;z-index:1001!important;overflow:visible!important}.menu-toggle{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;display:grid!important;place-items:center!important;border:2px solid #c16aff!important;background:#160d25!important;color:#fff!important;box-shadow:4px 4px 0 #4e1b79!important;cursor:pointer!important;position:relative!important;z-index:1003!important}.menu-toggle .dots{font:32px monospace!important;color:#fff!important}.menu-pop{position:absolute!important;right:0!important;top:calc(100% + 12px)!important;width:225px!important;padding:9px!important;display:none!important;z-index:1005!important;background:#10091b!important;border:2px solid #c16aff!important;box-shadow:6px 6px 0 #4e1b79!important}.menu-pop.open{display:block!important;visibility:visible!important}.menu-pop a,.menu-pop a:visited{display:flex!important;justify-content:space-between!important;padding:14px!important;min-height:48px!important;color:#fff!important;background:#170e26!important;border-bottom:1px solid #5d3183!important;font:21px 'VT323',monospace!important}.menu-pop a.active,.menu-pop a:hover{background:#6f2ca5!important;color:#fff!important}@media(max-width:760px){.menu-pop{right:0!important;width:min(250px,82vw)!important}}</style><style>
+.doc-intro{max-width:760px;margin:0 auto 42px;text-align:center;padding:28px 22px;border:1px solid #8e4cc455;background:linear-gradient(135deg,#1b1028aa,#0c0913aa);box-shadow:0 0 35px #8d2cff12}
+.doc-intro h2{margin:12px 0;font-size:clamp(22px,4vw,32px)}
+.doc-intro p{max-width:620px;margin:0 auto;color:#b9a9c9;line-height:1.7}
+.doc-section{margin:42px 0}
+.doc-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px;padding-bottom:13px;border-bottom:1px solid #a45be755}
+.doc-heading h2{margin:5px 0 0;font-size:clamp(20px,3vw,27px)}
+.doc-section .grid{align-items:stretch}
+.doc-section .card{display:flex;flex-direction:column;min-height:205px;position:relative;overflow:hidden}
+.doc-section .card:before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(#d7a5ff,#7b2ec4);opacity:.8}
+.doc-section .card h3{font-size:21px;margin:12px 0 8px}
+.doc-section .card p{color:#b9a9c9;line-height:1.65;margin:0 0 18px}
+.doc-status{display:inline-flex;align-self:flex-start;margin-top:auto;padding:6px 9px;border:1px solid #a65be566;background:#8b3cc51a;color:#d9b8ff;font:16px 'VT323',monospace;letter-spacing:.4px}
+.doc-link{margin-top:auto;align-self:flex-start;color:#d9b8ff;border-bottom:1px solid #a65be5;padding-bottom:3px;font:18px 'VT323',monospace}
+.doc-link:hover{color:#fff}
+@media(max-width:650px){.doc-heading{align-items:flex-start;flex-direction:column}.doc-section{margin:32px 0}.doc-intro{padding:22px 16px}}
+</style></head><body><header class="wrap nav"><a class="logo" href="../"><img src="../assets/924(1).png" alt="PIXORUN"></a><div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button><nav class="menu-pop" id="site-menu" aria-label="Site pages"><a href="/Pixorun/" >Home<span>↗</span></a><a href="/Pixorun/gtd/" >GTD<span>↗</span></a><a href="/Pixorun/launchpad/" >Launchpad<span>↗</span></a><a href="/Pixorun/genesis/" >Genesis Pass<span>↗</span></a><a href="/Pixorun/roadmap/" >Roadmap<span>↗</span></a><a href="/Pixorun/documents/" class="active">Documents<span>↗</span></a><a href="/Pixorun/about/" >About<span>↗</span></a></nav></div></header><main class="wrap"><section class="hero"><span class="eyebrow">PIXORUN KNOWLEDGE BASE</span><h1>DOCUMENTATION</h1><p>Official project information, participation policies and technical resources.</p></section><section class="content">
+<div class="doc-intro"><span class="kicker">DOCUMENTATION HUB</span><h2>Everything in one place.</h2><p>Explore PIXORUN project documents. Each document will be published when its contents are finalized and ready for public access.</p></div>
+<div class="doc-section"><div class="doc-heading"><span class="kicker">01 / PROJECT</span><h2>Project &amp; Protocol</h2></div><div class="grid">
+<article class="card"><span class="kicker">PROJECT</span><h3>Project Overview</h3><p>PIXORUN vision, core concept, objectives and ecosystem overview.</p><span class="doc-status">Coming Soon</span></article>
+<article class="card"><span class="kicker">LITEPAPER</span><h3>Litepaper</h3><p>Project design, protocol concept, key components and planned development.</p><span class="doc-status">Coming Soon</span></article>
+<article class="card"><span class="kicker">TECHNICAL</span><h3>Protocol Architecture</h3><p>Technical structure, supported network and system components.</p><span class="doc-status">Coming Soon</span></article>
+<article class="card"><span class="kicker">DEVELOPMENT</span><h3>Roadmap &amp; Updates</h3><p>Public milestones, development progress and official changes.</p><a class="doc-link" href="/Pixorun/roadmap/">View Roadmap ↗</a></article>
+</div></div>
+<div class="doc-section"><div class="doc-heading"><span class="kicker">02 / TOKEN</span><h2>Token &amp; Launchpad</h2></div><div class="grid">
+<article class="card"><span class="kicker">TOKENOMICS</span><h3>Tokenomics</h3><p>Token supply, allocation, utility, distribution and vesting details, once finalized.</p><span class="doc-status">Coming Soon</span></article>
+<article class="card"><span class="kicker">LAUNCHPAD</span><h3>Launchpad Mechanics</h3><p>Token creation process, launch parameters and platform rules.</p><span class="doc-status">Coming Soon</span></article>
+<article class="card"><span class="kicker">CONTRACTS</span><h3>Smart Contract Addresses</h3><p>Verified official contract addresses and supported network details.</p><span class="doc-status">Published Before Launch</span></article>
+</div></div>
+<div class="doc-section"><div class="doc-heading"><span class="kicker">03 / COMMUNITY</span><h2>Participation &amp; Rewards</h2></div><div class="grid">
+<article class="card"><span class="kicker">RULES</span><h3>Participation Rules</h3><p>One genuine participant, one primary profile and one verified EVM wallet. No minimum X follower requirement.</p><span class="doc-status">Policy Summary</span></article>
+<article class="card"><span class="kicker">GTD</span><h3>GTD Campaign Rules</h3><p>Campaign tasks, submission requirements, verification and eligibility disclaimer.</p><span class="doc-status">Policy Summary</span></article>
+<article class="card"><span class="kicker">SUBMISSIONS</span><h3>Submission Guidelines</h3><p>X username, PIXORUN post link and EVM wallet submission requirements.</p><span class="doc-status">Policy Summary</span></article>
+<article class="card"><span class="kicker">GTD</span><h3>GTD Eligibility</h3><p>Eligibility criteria, review process and conditions for any potential allocation.</p><span class="doc-status">Details To Be Announced</span></article>
+<article class="card"><span class="kicker">GENESIS</span><h3>Genesis Pass</h3><p>Public information about Genesis Pass and its stated access role.</p><a class="doc-link" href="/Pixorun/genesis/">View Genesis Pass ↗</a></article>
+</div></div>
+<div class="doc-section"><div class="doc-heading"><span class="kicker">04 / SECURITY</span><h2>Security &amp; Technical Resources</h2></div><div class="grid">
+<article class="card"><span class="kicker">SECURITY</span><h3>Security Practices</h3><p>Security approach, responsible disclosure and user safety guidance.</p><span class="doc-status">Coming Soon</span></article>
+<article class="card"><span class="kicker">AUDIT</span><h3>Audit Reports</h3><p>Independent audit reports, findings and remediation status, if completed.</p><span class="doc-status">Not Published</span></article>
+<article class="card"><span class="kicker">BUG BOUNTY</span><h3>Bug Bounty</h3><p>Responsible vulnerability reporting process and any announced bounty terms.</p><span class="doc-status">Coming Soon</span></article>
+</div></div>
+<div class="doc-section"><div class="doc-heading"><span class="kicker">05 / LEGAL</span><h2>Policies &amp; Disclosures</h2></div><div class="grid">
+<article class="card"><span class="kicker">PRIVACY</span><h3>Privacy Policy</h3><p>What information may be collected, why it is used and how it is handled.</p><span class="doc-status">Full Policy Coming Soon</span></article>
+<article class="card"><span class="kicker">TERMS</span><h3>Terms of Use</h3><p>Terms governing access to and use of PIXORUN websites and services.</p><span class="doc-status">Coming Soon</span></article>
+<article class="card"><span class="kicker">RISK</span><h3>Risk Disclosure</h3><p>Important risks related to blockchain networks, smart contracts and digital assets.</p><span class="doc-status">Summary</span></article>
+<article class="card"><span class="kicker">DISCLAIMER</span><h3>Rewards &amp; Allocation Disclaimer</h3><p>Participation, points or referrals do not guarantee GTD, token allocation or financial returns.</p><span class="doc-status">Summary</span></article>
+</div></div>
+<p class="muted" style="text-align:center;margin-top:30px">Only information published on official PIXORUN channels should be treated as authoritative. Never trust unofficial contract addresses or impersonator accounts.</p>
+</section></main><script>(function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.menu-pop');if(!b||!m)return;function setOpen(v){m.classList.toggle('open',v);b.setAttribute('aria-expanded',String(v));b.setAttribute('aria-label',v?'Close site menu':'Open site menu')}b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();setOpen(!m.classList.contains('open'))});m.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false)});document.addEventListener('click',e=>{if(!m.contains(e.target)&&!b.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)})})();</script></body></html>
