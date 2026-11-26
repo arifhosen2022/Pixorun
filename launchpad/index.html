@@ -7,7 +7,7 @@
 <title>PIXORUN — Testnet Launchpad</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261126-menu2">
+<link rel="stylesheet" href="../styles.css?v=20261126-menu2">\n<link rel="stylesheet" href="app.css">
 <style>
 :root{--bg:#111116;--panel:#191920;--panel2:#20202a;--line:#34313f;--muted:#a6a2b2;--white:#f3f1f7;--violet:#815bff;--lime:#d4ff55}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:'Space Grotesk',sans-serif;background-image:radial-gradient(ellipse at 75% 0%,#432b7833 0,transparent 40%),linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:auto,36px 36px,36px 36px}
@@ -30,10 +30,24 @@ main{padding:42px 0 76px}.topline{display:flex;align-items:center;gap:10px;color
 </style>
 </head>
 <body>
-<header class="wrap nav">
-<a class="logo" href="../" aria-label="PIXORUN home"><img src="../assets/924(1).png" alt="PIXORUN"></a>
-<div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu">⋮</button>
-<nav class="menu-pop" id="site-menu" aria-label="Launchpad menu"><button type="button" id="menuConnect" class="menu-connect">Connect wallet</button><a href="/launchpad/" class="active">Mission Control<span>↗</span></a><a href="/launchpad/missions/">Explore Missions<span>↗</span></a><a href="/launchpad/create/">Launch Token<span>↗</span></a><a href="/launchpad/points/">PIXORUN Points<span>↗</span></a><a href="/launchpad/staking/">Staking Hub<span>↗</span></a><a href="/launchpad/creator/">Creator Studio<span>↗</span></a><a href="/launchpad/profile/">Profile<span>↗</span></a><a href="/launchpad/faucet/">Claim Faucet<span>↗</span></a><a href="/launchpad/fees/">Claim Fees<span>↗</span></a><a href="/launchpad/docs/">Documentation<span>↗</span></a><a href="/genesis/">Genesis Pass<span>↗</span></a><a href="/">Main Website<span>↗</span></a></nav></div>
+<header class="app-wrap app-nav">
+<a class="app-logo" href="../" aria-label="PIXORUN home">PIXO<b>RUN</b></a>
+<details class="app-menu">
+<summary aria-label="Open menu">⋮</summary>
+<nav>
+<button type="button" data-connect>Connect wallet</button>
+<a href="./" aria-current="page">Mission Control</a>
+<a href="./missions/">Missions</a>
+<a href="./create/">Launch</a>
+<a href="./staking/">Stake PIXORUN</a>
+<a href="./creator/">Creator</a>
+<a href="./profile/">Profile</a>
+<a href="./faucet/">Faucet</a>
+<a href="./fees/">Fees</a>
+<a href="./docs/">Docs</a>
+<a href="../">Main Website</a>
+</nav>
+</details>
 </header>
 <main class="wrap">
 <div class="topline"><span class="dot"></span> PIXORUN ECOSYSTEM <span style="color:#706a7c">/</span> TESTNET</div>
