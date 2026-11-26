@@ -142,6 +142,8 @@ Deno.serve(async (req: Request) => {
       const state = await rpc("launchpad_get_index_cursor", { p_wallet: address });
       if (!state) return json(req, { error: "Verified wallet profile not found." }, 404);
       if (state.history_complete) return json(req, { ...state, history_complete: true, message: "Wallet transaction history is fully indexed." });
+      const lock = await rpc("launchpad_begin_index", { p_wallet: address });
+      if (lock !== true) return json(req, { error: "Please wait 15 seconds before requesting the next indexing batch." }, 429);
 
       let cursor = state.cursor ?? null;
       let pagesRead = 0;
