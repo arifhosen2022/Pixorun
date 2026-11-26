@@ -60,6 +60,7 @@
 #gtdLaunchPanel h2{margin:0;color:#fff;font:clamp(22px,5vw,34px) 'Press Start 2P',monospace;line-height:1.6}
 #gtdLaunchPanel p{margin:18px 0 0;color:#cbbbd9;font:22px 'VT323',monospace;line-height:1.4}
 @media(max-width:560px){#gtdLaunchPanel .launch-kicker{font-size:8px}#gtdLaunchPanel h2{font-size:20px}}
+#gtdBackButton{display:inline-flex;align-items:center;justify-content:center;margin-top:24px;padding:13px 22px;min-height:44px;background:#815BFF;border:1px solid #b69cff;box-shadow:4px 4px 0 #4e1b79;color:#fff;text-decoration:none;font:10px "Press Start 2P",monospace;letter-spacing:.3px;transition:transform .2s,background .2s}#gtdBackButton:hover{background:#966fff;transform:translateY(-2px)}
 
 </style></head><body>
 <header class="wrap nav"><a class="logo" href="../"><img src="../assets/924(1).png" alt="PIXORUN"></a><div class="menu-wrap"><button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu"><span class="dots">⋮</span></button><nav class="menu-pop" id="site-menu" aria-label="Site pages"><a href="/">Home<span>↗</span></a><a href="/gtd/" class="active">GTD<span>↗</span></a><a href="/launchpad/">Launchpad<span>↗</span></a><a href="/genesis/">Genesis Pass<span>↗</span></a><a href="/roadmap/">Roadmap<span>↗</span></a><a href="/documents/">Documents<span>↗</span></a><a href="/about/">About<span>↗</span></a></nav></div></header>
@@ -198,6 +199,7 @@ restoreForm.addEventListener('submit',async e=>{
       <div><strong id="gtdSeconds" style="display:block;color:#d4ff55;font:clamp(28px,7vw,46px) 'VT323',monospace">00</strong><span style="color:#a995b8;font:9px 'Press Start 2P',monospace">SEC</span></div>
     </div>
     <p style="margin-top:22px">The GTD page unlocks automatically when the countdown ends.</p>
+    <a id="gtdBackButton" href="/">← BACK TO HOME</a>
   </div>
 </div>
 <script>
