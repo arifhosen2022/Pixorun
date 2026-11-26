@@ -25,10 +25,10 @@ The 0.1 ETH target is the aggregate amount raised by a token, not a minimum purc
 2. The app shows the connected address and native testnet ETH balance, with a link to the official faucet.
 3. User creates a token by entering name, symbol, description, logo, banner, website, X profile, and community link.
 4. The factory deploys a token and its curve instance; metadata is stored separately and referenced by the token record.
-5. Buyers purchase curve tokens with testnet ETH. Sellers return curve tokens for testnet ETH, subject to the curve's pricing and available reserve.
-6. The token page and user dashboard show ETH raised, curve progress, token details, and transaction history.
-7. At 0.1 ETH raised, the curve closes to further buys and sells according to the final contract rules; the token is marked Completed.
-8. A separate graduation step handles DEX liquidity. This must not be represented as automatic until the target DEX, router, pool pair, liquidity amount, and LP-token custody/lock design are selected and tested.
+5. Buyers purchase curve tokens with testnet ETH. Sellers can return curve tokens for testnet ETH while the curve is live, subject to the curve quote and the contract's available ETH reserve.
+6. The displayed progress is based on the curve contract's current net ETH reserve. Buys increase the reserve and progress; sells decrease both. Progress is capped at 100%.
+7. When the reserve reaches the 0.1 ETH target, the curve becomes Completed and both buys and sells are permanently disabled for that curve. Completion is terminal; there is no post-completion sell path through the curve.
+8. DEX graduation is a separate next step. Do not describe it as automatic until the target DEX, router, pool pair, liquidity amount, and LP-token custody/lock design are selected and tested.
 
 ## Contract architecture (proposed)
 
@@ -51,10 +51,10 @@ The 0.1 ETH target is the aggregate amount raised by a token, not a minimum purc
 ## Decisions still required before implementing the curve and graduation contracts
 
 1. **Curve pricing formula:** linear, exponential, or another explicitly defined curve. This determines the price path and the exact token amount received for each ETH amount.
-2. **Trading fee:** buy/sell fee percentage and destination.
-3. **Sell policy:** whether selling is allowed while the curve is live, and the exact reserve/quote rules.
-4. **Graduation DEX:** the supported testnet DEX/router and pool pair.
-5. **Graduation liquidity:** how much of the raised ETH and remaining tokens are supplied, and how LP tokens are held or locked.
-6. **Treasury authority:** the treasury wallet/multisig address that receives the 2,000,000-token allocation.
+2. **Linear curve parameters:** define the starting price and slope (or equivalent calibrated parameters) so the full 8,000,000-token curve allocation maps to the 0.1 ETH target. Define exact integer rounding and buy/sell quote behaviour.
+4. **Trading fee:** buy/sell fee percentage and destination.
+5. **Graduation DEX:** the supported testnet DEX/router and pool pair.
+6. **Graduation liquidity:** how much of the raised ETH and remaining tokens are supplied, and how LP tokens are held or locked.
+7. **Treasury authority:** the treasury wallet/multisig address that receives the 2,000,000-token allocation.
 
 These are security- and economics-critical. They must be explicit before writing deployable contracts; the UI must not invent or silently assume them.
