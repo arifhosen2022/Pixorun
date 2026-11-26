@@ -190,25 +190,40 @@ restoreForm.addEventListener('submit',async e=>{
   <div id="gtdLaunchPanel">
     <span class="launch-kicker">PIXORUN COMMUNITY</span>
     <h2 id="gtdLaunchTitle">GTD CAMPAIGN<br>STARTS IN 10 DAYS</h2>
-    <p>The GTD campaign page will unlock automatically when the countdown ends.</p>
+    <p>The campaign begins in</p>
+    <div id="gtdCountdown" aria-live="off" style="display:flex;justify-content:center;gap:clamp(8px,2.5vw,18px);margin-top:22px">
+      <div><strong id="gtdDays" style="display:block;color:#d4ff55;font:clamp(28px,7vw,46px) 'VT323',monospace">10</strong><span style="color:#a995b8;font:9px 'Press Start 2P',monospace">DAYS</span></div>
+      <div><strong id="gtdHours" style="display:block;color:#d4ff55;font:clamp(28px,7vw,46px) 'VT323',monospace">00</strong><span style="color:#a995b8;font:9px 'Press Start 2P',monospace">HRS</span></div>
+      <div><strong id="gtdMinutes" style="display:block;color:#d4ff55;font:clamp(28px,7vw,46px) 'VT323',monospace">00</strong><span style="color:#a995b8;font:9px 'Press Start 2P',monospace">MIN</span></div>
+      <div><strong id="gtdSeconds" style="display:block;color:#d4ff55;font:clamp(28px,7vw,46px) 'VT323',monospace">00</strong><span style="color:#a995b8;font:9px 'Press Start 2P',monospace">SEC</span></div>
+    </div>
+    <p style="margin-top:22px">The GTD page unlocks automatically when the countdown ends.</p>
   </div>
 </div>
 <script>
 (function(){
   const overlay=document.getElementById('gtdLaunchOverlay');
   const unlockAt=new Date('2026-12-06T11:44:00+06:00').getTime();
+  const fields={days:document.getElementById('gtdDays'),hours:document.getElementById('gtdHours'),minutes:document.getElementById('gtdMinutes'),seconds:document.getElementById('gtdSeconds')};
+  let timer;
   function updateLaunchGate(){
-    if(Date.now()>=unlockAt){
+    const remaining=unlockAt-Date.now();
+    if(remaining<=0){
       overlay.hidden=true;
       document.body.style.overflow='';
-    }else{
-      overlay.hidden=false;
-      document.body.style.overflow='hidden';
+      if(timer)clearInterval(timer);
+      return;
     }
+    overlay.hidden=false;
+    document.body.style.overflow='hidden';
+    const total=Math.floor(remaining/1000);
+    fields.days.textContent=String(Math.floor(total/86400)).padStart(2,'0');
+    fields.hours.textContent=String(Math.floor((total%86400)/3600)).padStart(2,'0');
+    fields.minutes.textContent=String(Math.floor((total%3600)/60)).padStart(2,'0');
+    fields.seconds.textContent=String(total%60).padStart(2,'0');
   }
   updateLaunchGate();
-  const delay=Math.max(0,unlockAt-Date.now());
-  if(delay>0)setTimeout(updateLaunchGate,delay);
+  timer=setInterval(updateLaunchGate,1000);
 })();
 </script>
 </body></html>
