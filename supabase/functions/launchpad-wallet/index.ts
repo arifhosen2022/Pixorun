@@ -141,7 +141,10 @@ Deno.serve(async (req: Request) => {
       }
       const state = await rpc("launchpad_get_index_cursor", { p_wallet: address });
       if (!state) return json(req, { error: "Verified wallet profile not found." }, 404);
-      if (state.history_complete) return json(req, { ...state, history_complete: true, message: "Wallet transaction history is fully indexed." });
+      if (state.history_complete) {
+        const reputation = await rpc("launchpad_calculate_reputation", { p_wallet: address });
+        return json(req, { ...state, reputation, history_complete: true, message: "Wallet transaction history is fully indexed." });
+      }
       const lock = await rpc("launchpad_begin_index", { p_wallet: address });
       if (lock !== true) return json(req, { error: "Please wait 15 seconds before requesting the next indexing batch." }, 429);
 
@@ -177,11 +180,14 @@ Deno.serve(async (req: Request) => {
         return json(req, { error: "On-chain history could not be fetched right now. " + reason, retryable: true }, 503);
       }
       const updated = await rpc("launchpad_get_index_cursor", { p_wallet: address });
+      const reputation = updated?.history_complete
+        ? await rpc("launchpad_calculate_reputation", { p_wallet: address })
+        : null;
       return json(req, {
-        ...updated, pages_read: pagesRead, new_transactions: stored,
+        ...updated, reputation, pages_read: pagesRead, new_transactions: stored,
         history_complete: Boolean(updated?.history_complete),
         message: updated?.history_complete ? "History indexing complete." : "Partial history saved. Continue indexing to fetch older transactions.",
-        score_status: updated?.history_complete ? "pending" : "indexing",
+        score_status: reputation?.score_status ?? (updated?.history_complete ? "pending" : "indexing"),
       });
     }
 
